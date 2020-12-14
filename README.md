@@ -57,7 +57,7 @@ I love building web applications, Games & discussing new product ideas.
 
 <hr>
 <h3 align="center">Support Me With : </h3> 
-<a href="https://www.buymeacoffee.com/dsquare0601" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Pizza" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/dsquare0601" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Pizza" style="height: 60px;width: 217px;" ></a>
 
 <h3>Reach Out To Me :</h3>
 <p><a href="https://www.twitter.com/dsquare0601"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=25></a> <a href="https://www.linkedin.com/in/dhaval-darji-9a5aa9147/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height=25></a> <a href="https://www.instagram.com/dsquare0601/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" height=25></a></p>
