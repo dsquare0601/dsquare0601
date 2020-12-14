@@ -14,15 +14,14 @@
 I'm Javascript Full Stack And .NET Web developer And Game Developer from Gujarat,INDIA.
 I love building web applications, Games & discussing new product ideas.
   </samp>
-  </p>
+
+  <label>I'm Currently Working/Learning On :</label>
+  MEAN STACK | MERN STACK | .NET CORE | GAME DEVELOPMENT
+</p>
 
 <br>
-
-<h2>I'm Currently Working/Learning On :</h2>
-MEAN STACK | MERN STACK | .NET CORE | GAME DEVELOPMENT
 
 <!--Reach out to me on [twitter][twitter] and [instagram][instagram] if you'd like to talk ✌️-->
 
 [twitter]: https://twitter.com/dsquare0601
 [instagram]: https://instagram.com/dsquare0601
-
