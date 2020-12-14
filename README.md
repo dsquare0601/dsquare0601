@@ -67,6 +67,8 @@ I love building web applications, Games & discussing new product ideas.
 <a href="https://www.buymeacoffee.com/dsquare0601" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Pizza" width="217px" height="60px"></a>
 
 <br>
+<br>
+<h3>Happy Visitors</h3>
 
 ![Visitor Count](https://profile-counter.glitch.me/dsquare0601/count.svg)
 </div>
