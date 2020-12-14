@@ -56,17 +56,18 @@ I love building web applications, Games & discussing new product ideas.
 <img height="137.3px" src="https://github-readme-stats.vercel.app/api?username=dsquare0601&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV --><img height="137.3px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dsquare0601&hide=html&hide_border=true&layout=compact&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" />
 
 <hr>
-<h3 align="center">Support Me With : </h3> 
-<a href="https://www.buymeacoffee.com/dsquare0601" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Pizza" style="height: 60px;width: 217px;" ></a>
+<div align="center">
+<h3>Support Me With : </h3> 
+<a href="https://www.buymeacoffee.com/dsquare0601" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Pizza" width="217px" height="60px" ></a>
+</div>
 
 <h3>Reach Out To Me :</h3>
 <p><a href="https://www.twitter.com/dsquare0601"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=25></a> <a href="https://www.linkedin.com/in/dhaval-darji-9a5aa9147/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height=25></a> <a href="https://www.instagram.com/dsquare0601/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" height=25></a></p>
 
 <br>
-<p align="center">
-
+<div align="center">
 ![Visitor Count](https://profile-counter.glitch.me/dsquare0601/count.svg)
-</p>
+</div>
 
 
 [twitter]: https://twitter.com/dsquare0601
