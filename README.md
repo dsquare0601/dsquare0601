@@ -64,7 +64,7 @@ I love building web applications, Games & discussing new product ideas.
 
 <br>
 <p align="center">
-![](https://gitwar.herokuapp.com/badge?username=dsquare0601&style=for-the-badge)
+[](https://gitwar.herokuapp.com/badge?username=dsquare0601&style=for-the-badge&label=PROFILE+VIEWS)
 </p>
 
 
