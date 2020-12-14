@@ -21,8 +21,8 @@ I love building web applications, Games & discussing new product ideas.
 
 <br>
 
-<h3 align="center"> Languages and Tools </h3>
-<p align="center">
+<h3> Languages and Tools </h3>
+<p>
 
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" alt="cpp"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/csharp/csharp.png" alt="csharp"></code><span>&nbsp;&nbsp;</span>
@@ -47,6 +47,8 @@ I love building web applications, Games & discussing new product ideas.
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/json/json.png" alt="json"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/unity/unity.png" alt="unity"></code><span>&nbsp;&nbsp;</span>
 </p>
+
+<img align="right" width="120" height="120" alt="Dsquare" src="Stuff/namaste.png"/>
 <!--<code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="bootstrap"></code>-->
 <!--Reach out to me on [twitter][twitter] and [instagram][instagram] if you'd like to talk ✌️-->
 <hr>
