@@ -25,7 +25,7 @@ I love building web applications, Games & discussing new product ideas.
 
 
 ### Languages and Tools:
-
+<p align="center">
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" alt="cpp"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/csharp/csharp.png" alt="csharp"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/aspnet/aspnet.png" alt="asp.net"></code><span>&nbsp;&nbsp;</span>
@@ -37,6 +37,7 @@ I love building web applications, Games & discussing new product ideas.
 <code><img height="27" src="https://devicons.github.io/devicon/devicon.git/icons/express/express-original.svg" alt="expressjs"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png" alt="azure"></code><span>&nbsp;&nbsp;</span>
 <br>
+<br>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="html"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="bootstrap"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="css"></code><span>&nbsp;&nbsp;</span>
@@ -47,6 +48,7 @@ I love building web applications, Games & discussing new product ideas.
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" alt="terminal"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/json/json.png" alt="json"></code><span>&nbsp;&nbsp;</span>
 <code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/unity/unity.png" alt="unity"></code><span>&nbsp;&nbsp;</span>
+</p>
 <!--<code><img height="27" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="bootstrap"></code>-->
 <!--Reach out to me on [twitter][twitter] and [instagram][instagram] if you'd like to talk ✌️-->
 
