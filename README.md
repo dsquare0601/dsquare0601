@@ -65,7 +65,7 @@ I love building web applications, Games & discussing new product ideas.
 <br>
 <p align="center">
 
-[![Visitor Count](https://profile-counter.glitch.me/brunnerlivio/count.svg)]
+![Visitor Count](https://profile-counter.glitch.me/dsquare0601/count.svg)
 </p>
 
 
