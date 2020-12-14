@@ -65,7 +65,7 @@ I love building web applications, Games & discussing new product ideas.
 <br>
 <p align="center">
 
-<img src="https://camo.githubusercontent.com/ede24b67fadd7b929d98bc85102c39c5bc0e1eaff670ec334ea88f03cc04db70/68747470733a2f2f70726f66696c652d636f756e7465722e676c697463682e6d652f6272756e6e65726c6976696f2f636f756e742e737667" alt="Visitor Count" data-canonical-src="https://profile-counter.glitch.me/dsquare0601/count.svg" style="max-width:100%;">
+<img alt="Visitor Count" data-canonical-src="https://profile-counter.glitch.me/dsquare0601/count.svg" style="max-width:100%;">
 </p>
 
 
