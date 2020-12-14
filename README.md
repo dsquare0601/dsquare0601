@@ -64,7 +64,7 @@ I love building web applications, Games & discussing new product ideas.
 
 <br>
 <p align="center">
-![Visitor Count](https://profile-counter.glitch.me/dsquare0601/count.svg)
+![](https://gitwar.herokuapp.com/badge?username=dsquare0601&style=for-the-badge)
 </p>
 
 
