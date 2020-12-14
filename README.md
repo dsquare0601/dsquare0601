@@ -4,7 +4,7 @@
 
 <h2> 𝐇I 𝐭𝐡𝐞𝐫𝐞, 𝐟𝐞𝐥𝐥𝐨𝐰 <𝚌𝚘𝚍𝚎𝚛𝚜/>! <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px"></h2>
 
-<img align="left" width="150" height="150" alt="Dani Akash" src="https://raw.githubusercontent.com/DaniAkash/DaniAkash/master/assets/avatar.png"/>
+<img align="left" width="150" height="150" alt="Dsquare" src="Stuff/hi.png"/>
 
 ### I'm Dhaval Darji
 
