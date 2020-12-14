@@ -65,12 +65,11 @@ I love building web applications, Games & discussing new product ideas.
 
 <h3>Support Me With : </h3> 
 <a href="https://www.buymeacoffee.com/dsquare0601" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Pizza" width="217px" height="60px"></a>
-</div>
-<p align="center">
+
+<br>
 
 ![Visitor Count](https://profile-counter.glitch.me/dsquare0601/count.svg)
-</p>
-
+</div>
 
 [twitter]: https://twitter.com/dsquare0601
 [instagram]: https://instagram.com/dsquare0601
