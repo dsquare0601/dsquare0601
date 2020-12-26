@@ -14,8 +14,8 @@
 I'm Javascript Full Stack And .NET Web developer And Game Developer from Gujarat,INDIA.
 I love building web applications, Games & discussing new product ideas.
   </samp>
-  <h3>I'm Currently Working/Learning On<br>
-  <p>MEAN STACK | MERN STACK | .NET CORE | GAME DEVELOPMENT</p></h3>
+  <h3>I'm Currently Working/Learning On<br></h3>
+  <p>MEAN STACK | MERN STACK | .NET CORE | GAME DEVELOPMENT</p>
 </p>
 <hr>
 
