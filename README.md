@@ -61,7 +61,6 @@ I love building web applications, Games & discussing new product ideas.
 
 <h3>Reach Out To Me :</h3>
 <p><a href="https://www.twitter.com/dsquare0601"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=25></a> <a href="https://www.linkedin.com/in/dhaval-darji-9a5aa9147/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height=25></a> <a href="https://www.instagram.com/dsquare0601/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" height=25></a>
-<a><img src="https://img.shields.io/badge/-darjidhaval19@gmail.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:darjidhaval19@gmail.com" height=25></a>
 </p>
 
 <br>
