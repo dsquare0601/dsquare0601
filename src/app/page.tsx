@@ -333,13 +333,77 @@ export default function Home() {
           <div className="h-screen flex items-center snap-start">
             <div className="p-8">
               <h4 className="text-xl">Work/Projects</h4>
-              <div>
-                <h5>Project Name</h5>
-                <p>2021</p>
-                <p>
-                  A web application that allows users to create and share
-                  playlists
-                </p>
+              <div className="space-y-4">
+                <div>
+                  <h5>Water, Sewer, and Construction Management</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Preview Free Movies Project</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Insurance Management System</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Course Selling and Management Platform</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Large Dataset Printing Management</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Real-time Q/A, Chat, and Audio Meeting Application</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Restaurant POS Management</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Third-Party Ticketing and Selling Platform</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Legislative Bill Management System</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
+                <div>
+                  <h5>Operational Dashboard with IoT Integration.</h5>
+                  <p>
+                    A web application that allows users to create and share
+                    playlists
+                  </p>
+                </div>
               </div>
             </div>
           </div>
