@@ -412,21 +412,132 @@ export default function Home() {
           <div className="h-screen flex items-center snap-start">
             <div className="p-8">
               <h4 className="text-xl">Skills</h4>
-              <div>
-                <h5>Frontend</h5>
-                <ul>
-                  <li>React</li>
-                  <li>JavaScript</li>
-                  <li>TypeScript</li>
-                </ul>
-              </div>
-              <div>
-                <h5>Backend</h5>
-                <ul>
-                  <li>Node.js</li>
-                  <li>Express</li>
-                  <li>PostgreSQL</li>
-                </ul>
+              <div className="flex flex-col space-y-6">
+                <div>
+                  <h5>Frontend</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>ReactJS</span>
+                    <span>Next.js</span>
+                    <span>Redux</span>
+                    <span>AngularJS</span>
+                    <span>Tailwind CSS</span>
+                    <span>SCSS</span>
+                    <span>Webpack 5</span>
+                    <span>Bootstrap</span>
+                    <span>Material UI</span>
+                    <span>Semantic UI</span>
+                    <span>Three.js</span>
+                    <span>React Three Fiber</span>
+                    <span>Ionic</span>
+                  </div>
+                </div>
+
+                <div>
+                  <h5>Backend</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>Node.js</span>
+                    <span>TypeScript</span>
+                    <span>NestJS</span>
+                    <span>Express.js</span>
+                    <span>LoopBack</span>
+                    <span>GraphQL</span>
+                    <span>WebSockets (Socket.io)</span>
+                    <span>C#</span>
+                  </div>
+                </div>
+                <div>
+                  <h5>Databases</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>PostgreSQL</span>
+                    <span>MySQL</span>
+                    <span>MongoDB</span>
+                    <span>DynamoDB</span>
+                    <span>SQL Server</span>
+                    <span>AWS RDS</span>
+                    <span>Azure SQL</span>
+                  </div>
+                </div>
+                <div>
+                  <h5>Cloud & Server</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>AWS S3</span>
+                    <span>AWS EC2</span>
+                    <span>AWS API Gateway</span>
+                    <span>AWS Lambda</span>
+                    <span>AWS Amplify</span>
+                    <span>AWS AppSync</span>
+                    <span>AWS RDS</span>
+                    <span>AWS CloudWatch</span>
+                    <span>AWS VPCs</span>
+                    <span>Azure App Service,Azure DevOps</span>
+                    <span>Google Firebase</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                  </div>
+                </div>
+                <div>
+                  <h5>Web Technologies</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>JSON</span>
+                    <span>REST</span>
+                    <span>GraphQL</span>
+                  </div>
+                </div>
+                <div>
+                  <h5>Caching & Search Optimization</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>Redis (Caching & Queue Management)</span>
+                    <span>Elasticsearch</span>
+                  </div>
+                </div>
+                <div>
+                  <h5>DevOps & CI/CD</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>Azure DevOps</span>
+                    <span>Git</span>
+                    <span>CI/CD Pipelines</span>
+                    <span>CronJob Scheduling</span>
+                    <span>Batch File Processing</span>
+                    <span>Process Queue Management</span>
+                  </div>
+                </div>
+                <div>
+                  <h5>Payments & Integrations</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>Stripe Payment</span>
+                    <span>Twilio</span>
+                    <span>Salesforce</span>
+                    <span>TicketMaster</span>
+                    <span>SkyBox/Vivid Seats</span>
+                    <span>Google Login</span>
+                    <span>Google Translate,Google Maps</span>
+                    <span>Mandrill</span>
+                    <span>Tango Rewards</span>
+                    <span>HMAC Verification</span>
+                  </div>
+                </div>
+                <div>
+                  <h5>API Development & Optimization</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>RESTful APIs</span>
+                    <span>Large Dataset Import/Export (Excel/CSV)</span>
+                    <span>API Optimization</span>
+                    <span>Service Scheduling & Automation</span>
+                  </div>
+                </div>
+                <div>
+                  <h5>Leadership & Management</h5>
+                  <div className="flex flex-row flex-wrap space-x-2">
+                    <span>Team Leadership</span>
+                    <span>Training & Mentorship</span>
+                    <span>Client Communication</span>
+                    <span>Requirement Gathering</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
