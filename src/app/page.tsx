@@ -18,14 +18,39 @@ export default function Home() {
         <div className="flex-1 h-screen overflow-y-scroll snap-y snap-mandatory no-scrollbar">
           {/* About Me */}
           <div className="h-screen flex items-center snap-start">
-            <div className="p-8">
-              <h4 className="text-xl">About Me</h4>
-              <p>
-                I am a software engineer with a passion for building web
-                applications. I have experience with React, Node.js, and
-                TypeScript. I am always looking to learn new technologies and
-                improve my skills.
-              </p>
+            <div>
+              <div className="p-8 flex flex-col md:flex-row items-center gap-8">
+                <div className="relative w-48 h-48 overflow-hidden">
+                  <Image
+                    src="/images/hi.png"
+                    alt="Profile photo"
+                    width={500}
+                    height={500}
+                    className="rounded-none"
+                    priority
+                  />
+                </div>
+                <div>
+                  <h4 className="text-2xl">
+                    G’day, I’m Dhaval Darji
+                    <br />
+                    Full Stack Web Developer
+                    <br />
+                    And Trekker / Hiker / Traveler / Foodie.
+                  </h4>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Engineer by profession, problem-solver by passion, explorer by
+                  heart.
+                </p>
+                <p>
+                  Experienced full-stack developer who enjoys building robust
+                  backends, leading teams, and delivering high-quality
+                  applications.
+                </p>
+              </div>
             </div>
           </div>
 
