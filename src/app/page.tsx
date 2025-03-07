@@ -1,6 +1,38 @@
+"use client";
 import Image from "next/image";
+import { useState, useCallback } from "react";
 
 export default function Home() {
+  const [isScrollingPaused, setIsScrollingPaused] = useState(false);
+
+  const handleSectionScroll = useCallback(
+    (e: React.UIEvent<HTMLDivElement>) => {
+      const target = e.target as HTMLDivElement;
+      const isAtBottom =
+        Math.abs(target.scrollHeight - target.scrollTop - target.clientHeight) <
+        1;
+
+      if (isAtBottom && !isScrollingPaused) {
+        setIsScrollingPaused(true);
+
+        // Wait for .5 seconds before allowing the next section scroll
+        setTimeout(() => {
+          const nextSection = target.closest(".snap-start")?.nextElementSibling;
+          if (nextSection) {
+            nextSection.scrollIntoView({ behavior: "smooth" });
+          }
+          // document.body.removeChild(indicator);
+
+          // Reset the pause after another short delay
+          setTimeout(() => {
+            setIsScrollingPaused(false);
+          }, 500);
+        }, 500);
+      }
+    },
+    [isScrollingPaused]
+  );
+
   return (
     <div className="px-25">
       <main className="flex min-h-screen">
@@ -56,8 +88,11 @@ export default function Home() {
 
           {/* Experience */}
           <div className="h-screen flex items-center snap-start">
-            <div className="p-8 space-y-8">
-              <h4 className="text-xl mb-6">Experience</h4>
+            <div
+              className="max-h-[80vh] overflow-y-auto p-8 scrollbar-thin"
+              onScroll={handleSectionScroll}
+            >
+              <h4 className="text-xl mb-6 top-0 bg-white z-10">Experience</h4>
 
               {/* Role 1 */}
               <div className="space-y-4">
@@ -331,8 +366,13 @@ export default function Home() {
 
           {/* Work/Projects */}
           <div className="h-screen flex items-center snap-start">
-            <div className="p-8">
-              <h4 className="text-xl">Work/Projects</h4>
+            <div
+              className="max-h-[80vh] overflow-y-auto p-8 scrollbar-thin"
+              onScroll={handleSectionScroll}
+            >
+              <h4 className="text-xl mb-6 top-0 bg-white z-10">
+                Work/Projects
+              </h4>
               <div className="space-y-4">
                 <div>
                   <h5>Water, Sewer, and Construction Management</h5>
@@ -410,8 +450,11 @@ export default function Home() {
 
           {/* Skills */}
           <div className="h-screen flex items-center snap-start">
-            <div className="p-8">
-              <h4 className="text-xl">Skills</h4>
+            <div
+              className="max-h-[80vh] overflow-y-auto p-8 scrollbar-thin"
+              onScroll={handleSectionScroll}
+            >
+              <h4 className="text-xl mb-6 top-0 bg-white z-10">Skills</h4>
               <div className="flex flex-col space-y-6">
                 <div>
                   <h5>Frontend</h5>
