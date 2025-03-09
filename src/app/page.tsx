@@ -106,90 +106,103 @@ export default function Page() {
           </section>
 
           {/* Experience Section */}
-          <section className="min-h-[calc(100vh-4rem)] snap-start">
-            <div className="px-40 h-full flex items-center">
-              <div className="grid items-center gap-8">
-                {/* Role 1 */}
-                <div className="space-y-4">
-                  <div>
-                    <h5 className="text-lg font-semibold">
-                      Full Stack Development Consultant
-                    </h5>
-                    <p className="text-gray-600">Qualitésoft</p>
-                    <p className="text-sm text-gray-500">May 2023 - Present</p>
-                  </div>
-                  <p>
-                    Built and optimized end-to-end systems, integrating batch
-                    NDA processing, rewards distribution, VIP guest management,
-                    and third-party recruiter onboarding with secure payment
-                    flows.
-                  </p>
-                </div>
+          <section className="min-h-[calc(100vh-4rem)] snap-start flex items-center">
+            <div className="px-20 w-full">
+              <div className="relative w-full py-32">
+                {/* Horizontal line */}
+                <div className="top-[53%] absolute left-0 w-full h-0.5 bg-gray-200"></div>
 
-                {/* Role 2 */}
-                <div className="space-y-4">
-                  <div>
-                    <h5 className="text-lg font-semibold">
-                      Sr. Full Stack Developer
-                    </h5>
-                    <p className="text-gray-600">
-                      Algoscale Technologies PVT LTD
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      1 Year 6 months, March 2023 — August 2024
-                    </p>
+                <div className="flex justify-between relative max-w-6xl mx-auto">
+                  {/* Role 1 - Top */}
+                  <div className="w-100 relative group">
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
+                    <div className="absolute w-full bottom-[calc(50%+1rem)] pb-4">
+                      <div className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-2">
+                        <h5 className="text-lg font-semibold">
+                          Full Stack Development Consultant
+                        </h5>
+                        <p className="text-gray-400">Qualitésoft</p>
+                        <p className="text-sm text-gray-400">
+                          May 2023 - Present
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          Built and optimized end-to-end systems, integrating
+                          batch NDA processing, rewards distribution, VIP guest
+                          management, and third-party recruiter onboarding with
+                          secure payment flows.
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <p>
-                    Designed and deployed end-to-end full-stack solutions across
-                    5+ projects in course management, insurance, and
-                    infrastructure domains, leveraging Node.js, React, Strapi,
-                    and AWS/Azure to build scalable applications while
-                    optimizing APIs, automating workflows, and enhancing search
-                    and analytics with Redis and Elasticsearch.
-                  </p>
-                </div>
-
-                {/* Role 3 */}
-                <div className="space-y-4">
-                  <div>
-                    <h5 className="text-lg font-semibold">
-                      Sr. Full Stack Developer
-                    </h5>
-                    <p className="text-gray-600">
-                      iGenerate Technology PVT LTD
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      2 Years 1 month, February 2021 — February 2023
-                    </p>
+                  {/* Role 2 - Bottom */}
+                  <div className="w-100 relative group">
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
+                    <div className="absolute w-full top-[calc(50%+1rem)] pt-4">
+                      <div className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-2">
+                        <h5 className="text-lg font-semibold">
+                          Sr. Full Stack Developer
+                        </h5>
+                        <p className="text-gray-400">Algoscale Technologies</p>
+                        <p className="text-sm text-gray-400">
+                          Mar 2023 — Aug 2024
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          Designed and deployed end-to-end full-stack solutions
+                          across 5+ projects in course management, insurance,
+                          and infrastructure domains, leveraging Node.js, React,
+                          Strapi, and AWS/Azure to build scalable applications
+                          while optimizing APIs, automating workflows, and
+                          enhancing search and analytics with Redis and
+                          Elasticsearch.
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <p>
-                    Designed and deployed scalable full-stack solutions,
-                    integrating AWS services, optimizing data pipelines,
-                    mentoring freshers, and leading cross-functional teams
-                    across multiple mid-level applications.
-                  </p>
-                </div>
-
-                {/* Role 4 */}
-                <div className="space-y-4">
-                  <div>
-                    <h5 className="text-lg font-semibold">
-                      Full Stack Trainee
-                    </h5>
-                    <p className="text-gray-600">MicroGO LLP</p>
-                    <p className="text-sm text-gray-500">
-                      3 Months, September 2020 — December 2020
-                    </p>
+                  {/* Role 3 - Top */}
+                  <div className="w-100 relative group">
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
+                    <div className="absolute w-full bottom-[calc(50%+1rem)] pb-4">
+                      <div className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-2">
+                        <h5 className="text-lg font-semibold">
+                          Sr. Full Stack Developer
+                        </h5>
+                        <p className="text-gray-400">iGenerate Technology</p>
+                        <p className="text-sm text-gray-400">
+                          Feb 2021 — Feb 2023
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          Designed and deployed scalable full-stack solutions,
+                          integrating AWS services, optimizing data pipelines,
+                          mentoring freshers, and leading cross-functional teams
+                          across multiple mid-level applications.
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <p>
-                    Planned and developed 3 operational dashboards from scratch,
-                    leading a 5-member team while designing databases,
-                    implementing CI/CD pipelines, and building 24+ IoT-driven
-                    APIs.
-                  </p>
+                  {/* Role 4 - Bottom */}
+                  <div className="w-100 relative group">
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
+                    <div className="absolute w-full top-[calc(50%+1rem)] pt-4">
+                      <div className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-2">
+                        <h5 className="text-lg font-semibold">
+                          Full Stack Trainee
+                        </h5>
+                        <p className="text-gray-400">MicroGO LLP</p>
+                        <p className="text-sm text-gray-400">
+                          Sep 2020 — Dec 2020
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          Planned and developed 3 operational dashboards from
+                          scratch, leading a 5-member team while designing
+                          databases, implementing CI/CD pipelines, and building
+                          24+ IoT-driven APIs.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
