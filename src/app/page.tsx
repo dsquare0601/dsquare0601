@@ -107,27 +107,177 @@ export default function Page() {
 
           {/* Experience Section */}
           <section className="min-h-[calc(100vh-4rem)] snap-start">
-            <div className="px-20 h-full flex items-center">
+            <div className="px-40 h-full flex items-center">
               <div className="grid items-center gap-8">
-                <h2 className="text-4xl font-bold">Experience</h2>
-                {/* Add your experience content */}
+                {/* Role 1 */}
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="text-lg font-semibold">
+                      Full Stack Development Consultant
+                    </h5>
+                    <p className="text-gray-600">Qualitésoft</p>
+                    <p className="text-sm text-gray-500">May 2023 - Present</p>
+                  </div>
+                  <p>
+                    Built and optimized end-to-end systems, integrating batch
+                    NDA processing, rewards distribution, VIP guest management,
+                    and third-party recruiter onboarding with secure payment
+                    flows.
+                  </p>
+                </div>
+
+                {/* Role 2 */}
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="text-lg font-semibold">
+                      Sr. Full Stack Developer
+                    </h5>
+                    <p className="text-gray-600">
+                      Algoscale Technologies PVT LTD
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      1 Year 6 months, March 2023 — August 2024
+                    </p>
+                  </div>
+
+                  <p>
+                    Designed and deployed end-to-end full-stack solutions across
+                    5+ projects in course management, insurance, and
+                    infrastructure domains, leveraging Node.js, React, Strapi,
+                    and AWS/Azure to build scalable applications while
+                    optimizing APIs, automating workflows, and enhancing search
+                    and analytics with Redis and Elasticsearch.
+                  </p>
+                </div>
+
+                {/* Role 3 */}
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="text-lg font-semibold">
+                      Sr. Full Stack Developer
+                    </h5>
+                    <p className="text-gray-600">
+                      iGenerate Technology PVT LTD
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      2 Years 1 month, February 2021 — February 2023
+                    </p>
+                  </div>
+
+                  <p>
+                    Designed and deployed scalable full-stack solutions,
+                    integrating AWS services, optimizing data pipelines,
+                    mentoring freshers, and leading cross-functional teams
+                    across multiple mid-level applications.
+                  </p>
+                </div>
+
+                {/* Role 4 */}
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="text-lg font-semibold">
+                      Full Stack Trainee
+                    </h5>
+                    <p className="text-gray-600">MicroGO LLP</p>
+                    <p className="text-sm text-gray-500">
+                      3 Months, September 2020 — December 2020
+                    </p>
+                  </div>
+
+                  <p>
+                    Planned and developed 3 operational dashboards from scratch,
+                    leading a 5-member team while designing databases,
+                    implementing CI/CD pipelines, and building 24+ IoT-driven
+                    APIs.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Projects Section */}
           <section className="min-h-[calc(100vh-4rem)] snap-start">
-            <div className="px-20 h-full flex items-center">
+            <div className="px-40 h-full flex items-center">
               <div className="grid items-center gap-8">
-                <h2 className="text-4xl font-bold">Projects</h2>
-                {/* Add your projects content */}
+                <div className="space-y-4">
+                  <div>
+                    <h5>Water, Sewer, and Construction Management</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Preview Free Movies Project</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Insurance Management System</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Course Selling and Management Platform</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Large Dataset Printing Management</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Real-time Q/A, Chat, and Audio Meeting Application</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Restaurant POS Management</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Third-Party Ticketing and Selling Platform</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Legislative Bill Management System</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Operational Dashboard with IoT Integration.</h5>
+                    <p>
+                      A web application that allows users to create and share
+                      playlists
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Skills Section */}
           <section className="min-h-[calc(100vh-4rem)] snap-start">
-            <div className="px-20 h-full flex items-center">
+            <div className="px-40 h-full flex items-center">
               <div className="grid items-center gap-8">
                 <h2 className="text-4xl font-bold">Skills</h2>
                 {/* Add your skills content */}
