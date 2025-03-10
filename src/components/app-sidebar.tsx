@@ -51,7 +51,7 @@ const data = {
       icon: Map,
     },
     {
-      name: "Skills",
+      name: "Skills & Tools",
       url: "#",
       icon: Map,
     },
