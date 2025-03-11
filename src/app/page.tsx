@@ -22,6 +22,59 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Database,
+  Server,
+  Code,
+  Layers,
+  Box,
+  Cloud,
+  Wrench,
+} from "lucide-react";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiRedux,
+  SiAngular,
+  SiTailwindcss,
+  SiSass,
+  SiWebpack,
+  SiBootstrap,
+  SiAmazons3,
+  SiSemanticuireact,
+  SiThreedotjs,
+  SiNodedotjs,
+  SiTypescript,
+  SiNestjs,
+  SiExpress,
+  SiGraphql,
+  SiRedis,
+  SiElasticsearch,
+  SiSocketdotio,
+  SiAwsamplify,
+  SiAwslambda,
+  SiAwssecretsmanager,
+  SiAmazonwebservices,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiAmazondynamodb,
+  SiAmazonrds,
+  SiFirebase,
+  SiDocker,
+  SiKubernetes,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiJson,
+  SiGit,
+  SiGithubactions,
+  SiSalesforce,
+  SiTwilio,
+  SiStripe,
+  SiPostman,
+  SiMui,
+} from "@icons-pack/react-simple-icons";
 
 export default function Page() {
   return (
@@ -298,11 +351,170 @@ export default function Page() {
           </section>
 
           {/* Skills Section */}
-          <section className="min-h-[calc(100vh-4rem)] snap-start">
-            <div className="px-40 h-full flex items-center">
-              <div className="grid items-center gap-8">
-                <h2 className="text-4xl font-bold">Skills</h2>
-                {/* Add your skills content */}
+          <section className="min-h-[calc(100vh-4rem)] snap-start flex items-center justify-center">
+            <div className="container px-20 py-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                {/* Frontend */}
+                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div className="flex items-center gap-2 mb-4 ml-2">
+                    <Layers className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-semibold">Frontend</h3>
+                  </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {frontendSkills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
+                      >
+                        {skill.isImage ? (
+                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
+                            {skill.icon}
+                          </div>
+                        ) : (
+                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
+                        )}
+                        <span className="text-xs text-center">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Backend */}
+                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div className="flex items-center gap-2 mb-4 ml-2">
+                    <Server className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-semibold">Backend</h3>
+                  </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {backendSkills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
+                      >
+                        {skill.isImage ? (
+                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
+                            {skill.icon}
+                          </div>
+                        ) : (
+                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
+                        )}
+                        <span className="text-xs text-center">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Databases */}
+                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div className="flex items-center gap-2 mb-4 ml-2">
+                    <Database className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-semibold">Databases</h3>
+                  </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {databaseSkills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
+                      >
+                        {skill.isImage ? (
+                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
+                            {skill.icon}
+                          </div>
+                        ) : (
+                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
+                        )}
+                        <span className="text-xs text-center">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Cloud & Server */}
+                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div className="flex items-center gap-2 mb-4 ml-2">
+                    <Cloud className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-semibold">Cloud & Server</h3>
+                  </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {cloudSkills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
+                      >
+                        {skill.isImage ? (
+                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
+                            {skill.icon}
+                          </div>
+                        ) : (
+                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
+                        )}
+                        <span className="text-xs text-center">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Web Technologies */}
+                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div className="flex items-center gap-2 mb-4 ml-2">
+                    <Code className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-semibold">Web Technologies</h3>
+                  </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {webTechSkills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
+                      >
+                        {skill.isImage ? (
+                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
+                            {skill.icon}
+                          </div>
+                        ) : (
+                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
+                        )}
+                        <span className="text-xs text-center">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Other Tools */}
+                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div className="flex items-center gap-2 mb-4 ml-2">
+                    <Wrench className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-semibold">Other Tools</h3>
+                  </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {otherToolsSkills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
+                      >
+                        {skill.isImage ? (
+                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
+                            {skill.icon}
+                          </div>
+                        ) : (
+                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
+                        )}
+                        <span className="text-xs text-center">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -451,4 +663,119 @@ const personalProjects = [
     image: "/images/tasks.png",
     techStack: [{ icon: Github }, { icon: Github }, { icon: GitBranch }],
   },
+];
+
+const frontendSkills = [
+  { name: "React", icon: SiReact },
+  { name: "Next.js", icon: SiNextdotjs },
+  { name: "Redux", icon: SiRedux },
+  { name: "Angular", icon: SiAngular },
+  { name: "Tailwind", icon: SiTailwindcss },
+  { name: "SCSS", icon: SiSass },
+  { name: "Webpack", icon: SiWebpack },
+  { name: "Bootstrap", icon: SiBootstrap },
+  { name: "Material UI", icon: SiMui }, //SiMaterialui },
+  { name: "Semantic UI", icon: SiSemanticuireact },
+  { name: "Three.js", icon: SiThreedotjs },
+];
+
+const backendSkills = [
+  { name: "Node.js", icon: SiNodedotjs },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "NestJS", icon: SiNestjs },
+  { name: "Express", icon: SiExpress },
+  { name: "GraphQL", icon: SiGraphql },
+  { name: "Redis", icon: SiRedis },
+  { name: "Elasticsearch", icon: SiElasticsearch },
+  { name: "Socket.io", icon: SiSocketdotio },
+  {
+    name: "C#",
+    isImage: true,
+    icon: (
+      <Image
+        src="/csharp-icon.png"
+        alt="C#"
+        width={32}
+        height={32}
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+];
+
+const databaseSkills = [
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "MySQL", icon: SiMysql },
+  { name: "MongoDB", icon: SiMongodb },
+  { name: "DynamoDB", icon: SiAmazondynamodb },
+  { name: "SQL Server", icon: SiAmazondynamodb },
+  { name: "AWS RDS", icon: SiAmazonrds },
+];
+
+const cloudSkills = [
+  { name: "AWS", icon: SiAmazonwebservices },
+  { name: "AWS Amplify", icon: SiAwsamplify },
+  { name: "AWS AppSync", icon: SiAmazonwebservices },
+  {
+    name: "AWS Lambda",
+    isImage: true,
+    icon: (
+      <Image
+        src="/lambda-icon.png"
+        alt="C#"
+        width={32}
+        height={32}
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+  { name: "AWS S3", icon: SiAmazons3 },
+  { name: "AWS Secret Manager", icon: SiAwssecretsmanager },
+  {
+    name: "azure-icon",
+    isImage: true,
+    icon: (
+      <Image
+        src="/azure-icon.png"
+        alt="C#"
+        width={32}
+        height={32}
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+  { name: "Firebase", icon: SiFirebase },
+  { name: "Docker", icon: SiDocker },
+  { name: "Kubernetes", icon: SiKubernetes },
+];
+
+const webTechSkills = [
+  { name: "HTML5", icon: SiHtml5 },
+  { name: "CSS3", icon: SiCss3 },
+  { name: "JavaScript", icon: SiJavascript },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "JSON", icon: SiJson },
+  { name: "GraphQL", icon: SiGraphql },
+];
+
+const otherToolsSkills = [
+  { name: "Git", icon: SiGit },
+  { name: "CI/CD", icon: SiGithubactions },
+  { name: "Salesforce", icon: SiSalesforce },
+  { name: "Twilio", icon: SiTwilio },
+  { name: "Stripe", icon: SiStripe },
+  {
+    name: "VS Code",
+    isImage: true,
+    icon: (
+      <Image
+        src="/vscode-icon.png"
+        alt="C#"
+        width={32}
+        height={32}
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+  { name: "Postman", icon: SiPostman },
 ];
