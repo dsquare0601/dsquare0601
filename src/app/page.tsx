@@ -75,11 +75,18 @@ import {
   SiPostman,
   SiMui,
 } from "@icons-pack/react-simple-icons";
+import { useEffect, useState } from "react";
 
 export default function Page() {
+  const [section, setSection] = useState("about-me");
+
+  useEffect(() => {
+    console.log("section :>> ", section);
+  }, [section]);
+
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar setSection={setSection} />
       <SidebarInset>
         <header className="sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
@@ -88,7 +95,7 @@ export default function Page() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbPage>About Me!</BreadcrumbPage>
+                  <BreadcrumbPage> About Me!</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -98,7 +105,10 @@ export default function Page() {
         {/* Scrollable content sections */}
         <div className="h-[calc(100vh-4rem)] overflow-y-auto snap-y snap-mandatory">
           {/* About Me Section */}
-          <section className="min-h-[calc(100vh-4rem)] snap-start">
+          <section
+            id="about-me"
+            className="min-h-[calc(100vh-4rem)] snap-start"
+          >
             <div className="px-20 h-full flex items-center">
               <div className="grid items-center gap-8">
                 <div className="relative w-[500px] h-auto overflow-hidden md:col-start-1 justify-items-center">
@@ -164,7 +174,10 @@ export default function Page() {
           </section>
 
           {/* Experience Section */}
-          <section className="min-h-[calc(100vh-4rem)] snap-start flex items-center">
+          <section
+            id="experience"
+            className="min-h-[calc(100vh-4rem)] snap-start flex items-center"
+          >
             <div className="px-20 w-full">
               <div className="relative w-full py-32">
                 {/* Horizontal line */}
@@ -267,7 +280,10 @@ export default function Page() {
           </section>
 
           {/* Projects Section */}
-          <section className="min-h-[calc(100vh-4rem)] snap-start flex items-center justify-center">
+          <section
+            id="projects"
+            className="min-h-[calc(100vh-4rem)] snap-start flex items-center justify-center"
+          >
             <div className="container mx-auto px-20">
               <div className="grid grid-cols-2 gap-8">
                 {/* Professional Projects */}
@@ -351,7 +367,10 @@ export default function Page() {
           </section>
 
           {/* Skills Section */}
-          <section className="min-h-[calc(100vh-4rem)] snap-start flex items-center justify-center">
+          <section
+            id="skills"
+            className="min-h-[calc(100vh-4rem)] snap-start flex items-center justify-center"
+          >
             <div className="container px-20 py-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {/* Frontend */}

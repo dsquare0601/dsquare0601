@@ -36,41 +36,41 @@ const data = {
   sections: [
     {
       name: "About Me!",
-      url: "#",
+      url: "#about-me",
       icon: Frame,
       isActive: true,
     },
     {
       name: "Experience",
-      url: "#",
+      url: "#experience",
       icon: PieChart,
     },
     {
       name: "Projects",
-      url: "#",
+      url: "#projects",
       icon: Map,
     },
     {
       name: "Skills & Tools",
-      url: "#",
+      url: "#skills",
       icon: Map,
     },
     {
       name: "Contact Me",
-      url: "#",
+      url: "#contact-me",
       icon: Map,
     },
   ],
 };
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({ setSection, ...props }) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher />
       </SidebarHeader>
       <SidebarContent>
-        <NavProjects projects={data.sections} />
+        <NavProjects projects={data.sections} setSection={setSection} />
       </SidebarContent>
       <SidebarRail />
     </Sidebar>
