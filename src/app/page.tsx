@@ -76,39 +76,50 @@ import {
   SiMui,
 } from "@icons-pack/react-simple-icons";
 import { useEffect, useState } from "react";
+import { SectionCarousel } from "@/components/section-carousel";
+import navbarData from "@/context/navbar.data";
 
 export default function Page() {
   const [section, setSection] = useState("about-me");
+  const [sectionTitle, setSectionTitle] = useState("About Me!");
+
+  const handleSectionChange = (newSection: string) => {
+    setSection(newSection);
+  };
 
   useEffect(() => {
-    console.log("section :>> ", section);
+    const sectionObj = navbarData.sections.find(
+      (s) => s.url.replace("#", "") === section
+    );
+    setSectionTitle(sectionObj?.name || "Portfolio");
   }, [section]);
 
   return (
     <SidebarProvider>
-      <AppSidebar setSection={setSection} />
+      <AppSidebar
+        setSection={handleSectionChange}
+        currentSection={section} // Add this prop
+      />
       <SidebarInset>
-        <header className="sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbPage> About Me!</BreadcrumbPage>
+                  <BreadcrumbPage>{sectionTitle}</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
           </div>
         </header>
 
-        {/* Scrollable content sections */}
-        <div className="h-[calc(100vh-4rem)] overflow-y-auto snap-y snap-mandatory">
-          {/* About Me Section */}
-          <section
-            id="about-me"
-            className="min-h-[calc(100vh-4rem)] snap-start"
-          >
+        <SectionCarousel
+          setSection={handleSectionChange}
+          currentSection={section}
+        >
+          <section id="about-me" className="h-full flex items-center">
             <div className="px-20 h-full flex items-center">
               <div className="grid items-center gap-8">
                 <div className="relative w-[500px] h-auto overflow-hidden md:col-start-1 justify-items-center">
@@ -173,18 +184,12 @@ export default function Page() {
             </div>
           </section>
 
-          {/* Experience Section */}
-          <section
-            id="experience"
-            className="min-h-[calc(100vh-4rem)] snap-start flex items-center"
-          >
+          <section id="experience" className="h-full flex items-center">
             <div className="px-20 w-full">
               <div className="relative w-full py-32">
-                {/* Horizontal line */}
                 <div className="top-[53%] absolute left-0 w-full h-0.5 bg-gray-200"></div>
 
                 <div className="flex justify-between relative max-w-6xl mx-auto">
-                  {/* Role 1 - Top */}
                   <div className="w-100 relative group">
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
                     <div className="absolute w-full bottom-[50%] pb-4">
@@ -206,7 +211,6 @@ export default function Page() {
                     </div>
                   </div>
 
-                  {/* Role 2 - Bottom */}
                   <div className="w-[calc(var(--spacing)*160)] relative group">
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
                     <div className="absolute w-full top-[calc(50%+1rem)] pt-4">
@@ -231,7 +235,6 @@ export default function Page() {
                     </div>
                   </div>
 
-                  {/* Role 3 - Top */}
                   <div className="w-100 relative group">
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
                     <div className="absolute w-full bottom-[50%] pb-4">
@@ -253,7 +256,6 @@ export default function Page() {
                     </div>
                   </div>
 
-                  {/* Role 4 - Bottom */}
                   <div className="w-100 relative group">
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
                     <div className="absolute w-full top-[calc(50%+1rem)] pt-4">
@@ -279,14 +281,12 @@ export default function Page() {
             </div>
           </section>
 
-          {/* Projects Section */}
           <section
             id="projects"
-            className="min-h-[calc(100vh-4rem)] snap-start flex items-center justify-center"
+            className="h-full flex items-center justify-center"
           >
             <div className="container mx-auto px-20">
               <div className="grid grid-cols-2 gap-8">
-                {/* Professional Projects */}
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 items-end">
                     <h2 className="text-3xl font-bold">
@@ -325,7 +325,6 @@ export default function Page() {
                   </ScrollArea>
                 </div>
 
-                {/* Personal Projects */}
                 <div className="space-y-4">
                   <h2 className="text-3xl font-bold">Personal Projects</h2>
                   <ScrollArea className="h-[500px] border rounded-lg p-4">
@@ -366,14 +365,12 @@ export default function Page() {
             </div>
           </section>
 
-          {/* Skills Section */}
           <section
             id="skills"
-            className="min-h-[calc(100vh-4rem)] snap-start flex items-center justify-center"
+            className="h-full flex items-center justify-center"
           >
             <div className="container px-20 py-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                {/* Frontend */}
                 <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
                   <div className="flex items-center gap-2 mb-4 ml-2">
                     <Layers className="w-6 h-6 text-primary" />
@@ -400,7 +397,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Backend */}
                 <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
                   <div className="flex items-center gap-2 mb-4 ml-2">
                     <Server className="w-6 h-6 text-primary" />
@@ -427,7 +423,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Databases */}
                 <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
                   <div className="flex items-center gap-2 mb-4 ml-2">
                     <Database className="w-6 h-6 text-primary" />
@@ -454,7 +449,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Cloud & Server */}
                 <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
                   <div className="flex items-center gap-2 mb-4 ml-2">
                     <Cloud className="w-6 h-6 text-primary" />
@@ -481,7 +475,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Web Technologies */}
                 <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
                   <div className="flex items-center gap-2 mb-4 ml-2">
                     <Code className="w-6 h-6 text-primary" />
@@ -508,7 +501,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Other Tools */}
                 <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
                   <div className="flex items-center gap-2 mb-4 ml-2">
                     <Wrench className="w-6 h-6 text-primary" />
@@ -537,7 +529,7 @@ export default function Page() {
               </div>
             </div>
           </section>
-        </div>
+        </SectionCarousel>
       </SidebarInset>
     </SidebarProvider>
   );

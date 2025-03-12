@@ -1,47 +1,40 @@
 "use client";
 
-import {
-  Folder,
-  Forward,
-  MoreHorizontal,
-  Trash2,
-  type LucideIcon,
-} from "lucide-react";
+import { NavLink } from "@/components/nav-link";
+import { Nav } from "@/components/ui/nav";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuAction,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  useSidebar,
-} from "@/components/ui/sidebar";
+interface NavProjectsProps {
+  projects: {
+    name: string;
+    url: string;
+    icon: any;
+  }[];
+  setSection: (section: string) => void;
+  currentSection: string; // Add this prop
+}
 
-export function NavProjects({ projects, setSection }) {
-  const { isMobile } = useSidebar();
+export function NavProjects({
+  projects,
+  setSection,
+  currentSection,
+}: NavProjectsProps) {
+  const handleSectionClick = (url: string) => {
+    const sectionId = url.replace("#", "");
+    setSection(sectionId);
+  };
 
   return (
-    <SidebarGroup>
-      <SidebarMenu>
-        {projects.map((item) => (
-          <SidebarMenuItem key={item.name}>
-            <SidebarMenuButton onClick={() => setSection(item.url)} asChild>
-              <a href={item.url}>
-                <item.icon />
-                <span>{item.name}</span>
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        ))}
-      </SidebarMenu>
-    </SidebarGroup>
+    <Nav>
+      {projects.map((project) => (
+        <NavLink
+          key={project.url}
+          name={project.name}
+          url={project.url}
+          icon={project.icon}
+          isActive={currentSection === project.url.replace("#", "")}
+          onClick={() => handleSectionClick(project.url)}
+        />
+      ))}
+    </Nav>
   );
 }

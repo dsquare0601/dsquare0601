@@ -1,18 +1,6 @@
 "use client";
 
 import * as React from "react";
-import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavProjects } from "@/components/nav-projects";
@@ -25,52 +13,29 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import navbarData from "@/context/navbar.data";
 
-// This is sample data.
-const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
-  sections: [
-    {
-      name: "About Me!",
-      url: "#about-me",
-      icon: Frame,
-      isActive: true,
-    },
-    {
-      name: "Experience",
-      url: "#experience",
-      icon: PieChart,
-    },
-    {
-      name: "Projects",
-      url: "#projects",
-      icon: Map,
-    },
-    {
-      name: "Skills & Tools",
-      url: "#skills",
-      icon: Map,
-    },
-    {
-      name: "Contact Me",
-      url: "#contact-me",
-      icon: Map,
-    },
-  ],
-};
+interface AppSidebarProps {
+  setSection: (section: string) => void;
+  currentSection: string; // Add this prop
+}
 
-export function AppSidebar({ setSection, ...props }) {
+export function AppSidebar({
+  setSection,
+  currentSection,
+  ...props
+}: AppSidebarProps) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher />
       </SidebarHeader>
       <SidebarContent>
-        <NavProjects projects={data.sections} setSection={setSection} />
+        <NavProjects
+          projects={navbarData.sections}
+          setSection={setSection}
+          currentSection={currentSection} // Pass the current section
+        />
       </SidebarContent>
       <SidebarRail />
     </Sidebar>
