@@ -46,7 +46,7 @@ const data = {
       icon: PieChart,
     },
     {
-      name: "Work/Projects",
+      name: "Projects",
       url: "#",
       icon: Map,
     },
@@ -72,9 +72,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavProjects projects={data.sections} />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   );
