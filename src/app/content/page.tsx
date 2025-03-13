@@ -16,15 +16,12 @@ export default function Content() {
       if (isAtBottom && !isScrollingPaused) {
         setIsScrollingPaused(true);
 
-        // Wait for .5 seconds before allowing the next section scroll
         setTimeout(() => {
           const nextSection = target.closest(".snap-start")?.nextElementSibling;
           if (nextSection) {
             nextSection.scrollIntoView({ behavior: "smooth" });
           }
-          // document.body.removeChild(indicator);
 
-          // Reset the pause after another short delay
           setTimeout(() => {
             setIsScrollingPaused(false);
           }, 500);

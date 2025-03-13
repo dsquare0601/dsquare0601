@@ -17,7 +17,7 @@ import navbarData from "@/context/navbar.data";
 
 interface AppSidebarProps {
   setSection: (section: string) => void;
-  currentSection: string; // Add this prop
+  currentSection: string;
 }
 
 export function AppSidebar({
@@ -34,7 +34,7 @@ export function AppSidebar({
         <NavProjects
           projects={navbarData.sections}
           setSection={setSection}
-          currentSection={currentSection} // Pass the current section
+          currentSection={currentSection}
         />
       </SidebarContent>
       <SidebarRail />

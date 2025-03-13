@@ -10,7 +10,7 @@ interface NavProjectsProps {
     icon: any;
   }[];
   setSection: (section: string) => void;
-  currentSection: string; // Add this prop
+  currentSection: string;
 }
 
 export function NavProjects({

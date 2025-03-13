@@ -18,7 +18,6 @@ export function SectionCarousel({
   const [isTransitioning, setIsTransitioning] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Handle section changes from sidebar
   useEffect(() => {
     const sectionIndex = children.findIndex(
       (child) => (child as React.ReactElement).props.id === currentSection
@@ -33,12 +32,11 @@ export function SectionCarousel({
     setIsTransitioning(true);
     setActiveSection(index);
 
-    // Get section ID and update sidebar
     const sectionElement = children[index] as React.ReactElement;
     const sectionId = sectionElement.props.id;
     setSection(sectionId);
 
-    setTimeout(() => setIsTransitioning(false), 500); // Reduced from 1000 to 500
+    setTimeout(() => setIsTransitioning(false), 500);
   };
 
   useEffect(() => {
@@ -54,7 +52,7 @@ export function SectionCarousel({
       if (isTransitioning) return;
 
       const now = Date.now();
-      if (now - lastScroll < 500) return; // Debounce scroll events
+      if (now - lastScroll < 500) return;
       lastScroll = now;
 
       const direction = e.deltaY > 0 ? 1 : -1;
@@ -81,7 +79,7 @@ export function SectionCarousel({
         <div
           key={index}
           className={cn(
-            "absolute inset-0 w-full h-full transition-transform duration-500 ease-in-out", // Changed from duration-1000 to duration-500
+            "absolute inset-0 w-full h-full transition-transform duration-500 ease-in-out",
             index === activeSection ? "z-10" : "z-0"
           )}
           style={{
