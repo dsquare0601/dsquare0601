@@ -580,32 +580,23 @@ const professionalProjects = [
 
 const personalProjects = [
   {
-    title: "Portfolio Website",
-    description: "",
-    image: "/images/portfolio.png",
-  },
-  {
     title: "r3f-vite-fm-shadcn",
     description:
       "R3F Vite + Framer Motion + ShadCN: A modern, high-performance web application built with React Three Fiber (R3F), Vite, Framer Motion, and ShadCN.",
-    image: "/images/tasks.png",
   },
   {
     title: "uicaps",
     description: "User Interactive Collaborative Advance Planning System",
-    image: "/images/tasks.png",
   },
   {
     title: "Login-SignUp-API",
     description:
       "A Node.js-based authentication API with user registration and login functionality, featuring input validation, secure authentication using JWT, logging mechanisms, and structured error handling. It ensures robust security and efficient user management for authentication-based applications.",
-    image: "/images/tasks.png",
   },
   {
     title: "Binary-Problem",
     description:
       "A coding challenge solution focused on binary number manipulation, implemented in JavaScript. It processes binary input to solve a specific computational problem efficiently, showcasing algorithmic logic and problem-solving skills.",
-    image: "/images/tasks.png",
   },
 ];
 
