@@ -340,6 +340,9 @@ export default function Page() {
                           </AccordionTrigger>
                           <AccordionContent>
                             <div className="space-y-4 px-4">
+                              <p className="text-sm text-muted-foreground">
+                                {project.description}
+                              </p>
                               {project.image && (
                                 <Image
                                   src={project.image}
@@ -539,29 +542,7 @@ const professionalProjects = [
   {
     title: "Preview Free Movies Project",
     description:
-      "Comprehensive insurance policy and claims management platform",
-    techStack: [
-      { icon: Github },
-      { icon: Github },
-      { icon: Github },
-      { icon: Github },
-    ],
-  },
-  {
-    title: "Insurance Management System",
-    description:
-      "Comprehensive insurance policy and claims management platform",
-    techStack: [
-      { icon: Github },
-      { icon: Github },
-      { icon: Github },
-      { icon: Github },
-    ],
-  },
-  {
-    title: "Course Selling and Management Platform",
-    description:
-      "Comprehensive insurance policy and claims management platform",
+      "A comprehensive system for managing movie preview screenings and related administrative tasks, including audience recruitment, venue coordination, event scheduling, and attendance tracking. It streamlines operations such as managing screening invitations, tracking who attended or missed the event, handling check-ins via mobile apps, and ensuring seamless coordination between venues, audiences, and organizers.",
     techStack: [
       { icon: Github },
       { icon: Github },
@@ -572,7 +553,7 @@ const professionalProjects = [
   {
     title: "Large Dataset Printing Management",
     description:
-      "Comprehensive insurance policy and claims management platform",
+      "Designed for managing document printing for advertising or campaign operations. A back-office tool for an NY-based company that aggregates data from third-party sources and Salesforce, processes and organizes it into million-record packages for verification, and then generates PDFs via a third-party service for large-scale printing.",
     techStack: [
       { icon: Github },
       { icon: Github },
@@ -583,7 +564,7 @@ const professionalProjects = [
   {
     title: "Real-time Q/A, Chat, and Audio Meeting Application",
     description:
-      "Comprehensive insurance policy and claims management platform",
+      "A dynamic platform enabling real-time chat, Q&A sessions, and audio communication with role-based access for admins, moderators, participants, and viewers. It includes a back-office tool for data management, report generation, and email campaign features for engaging registrants.",
     techStack: [
       { icon: Github },
       { icon: Github },
@@ -594,7 +575,29 @@ const professionalProjects = [
   {
     title: "Restaurant POS Management",
     description:
-      "Comprehensive insurance policy and claims management platform",
+      "An all-in-one POS system for restaurants that centralizes real-time order management from aggregators like Zomato, Swiggy, and Talabat, along with menu synchronization, catalog configuration, table management for offline orders, and seamless order processing.",
+    techStack: [
+      { icon: Github },
+      { icon: Github },
+      { icon: Github },
+      { icon: Github },
+    ],
+  },
+  {
+    title: "Insurance Management System",
+    description:
+      "A platform that streamlines policy management by connecting policy providers, agents, and end users on a unified system. It facilitates policy creation, tracking, renewals, claims processing, premium payments, and document management while ensuring real-time updates, compliance tracking, and seamless communication among stakeholders.",
+    techStack: [
+      { icon: Github },
+      { icon: Github },
+      { icon: Github },
+      { icon: Github },
+    ],
+  },
+  {
+    title: "Course Selling and Management Platform",
+    description:
+      "A system for course management, featuring trending and user-preferred course lists, dynamic recommendations based on user preferences, category and subcategory management, topic-based organization, and personalized favorite lists to enhance user engagement and course discovery.",
     techStack: [
       { icon: Github },
       { icon: Github },
@@ -605,7 +608,7 @@ const professionalProjects = [
   {
     title: "Water, Sewer, and Construction Management",
     description:
-      "End-to-end system for managing water and sewer infrastructure",
+      "A web and mobile application for managing civil works, including excavations, tools, worker assignments, shift tracking, user management, task scheduling, and real-time notifications. It ensures seamless coordination with real-time updates between mobile and web platforms.",
     techStack: [
       { icon: Github },
       { icon: Github },
@@ -616,7 +619,7 @@ const professionalProjects = [
   {
     title: "Third-Party Ticketing and Selling Platform",
     description:
-      "Comprehensive insurance policy and claims management platform",
+      "An in-house Ticketmaster clone that scrapes real-time ticket availability from Ticketmaster and Vivid Seats, processes and updates the database through long-running scripts, and enables users to browse, book, and purchase tickets seamlessly through the platform.",
     techStack: [
       { icon: Github },
       { icon: Github },
@@ -627,7 +630,7 @@ const professionalProjects = [
   {
     title: "Legislative Bill Management System",
     description:
-      "Comprehensive insurance policy and claims management platform",
+      "A backend-driven system for managing legislative bills, enabling tracking, updating, and organizing bills throughout their lifecycle. It streamlines workflows for lawmakers, committees, and stakeholders by handling bill submissions, amendments, status updates, and document management while ensuring secure data processing and efficient backend operations.",
     techStack: [
       { icon: Github },
       { icon: Github },
@@ -638,7 +641,7 @@ const professionalProjects = [
   {
     title: "Operational Dashboard with IoT Integration.",
     description:
-      "Comprehensive insurance policy and claims management platform",
+      "A real-time operational dashboard designed to process and visualize data from IoT devices, enabling efficient monitoring and management of operations. It features dynamic data updates, user account management, automated data processing, and seamless integration with IoT devices through APIs, while supporting continuous deployment and cross-team collaboration for streamlined operations.",
     techStack: [
       { icon: Github },
       { icon: Github },
@@ -651,26 +654,34 @@ const professionalProjects = [
 const personalProjects = [
   {
     title: "Portfolio Website",
+    description: "",
     image: "/images/portfolio.png",
     techStack: [{ icon: Github }, { icon: Github }, { icon: Globe }],
   },
   {
     title: "r3f-vite-fm-shadcn",
+    description:
+      "R3F Vite + Framer Motion + ShadCN: A modern, high-performance web application built with React Three Fiber (R3F), Vite, Framer Motion, and ShadCN.",
     image: "/images/tasks.png",
     techStack: [{ icon: Github }, { icon: Github }, { icon: GitBranch }],
   },
   {
     title: "uicaps",
+    description: "User Interactive Collaborative Advance Planning System",
     image: "/images/tasks.png",
     techStack: [{ icon: Github }, { icon: Github }, { icon: GitBranch }],
   },
   {
     title: "Login-SignUp-API",
+    description:
+      "A Node.js-based authentication API with user registration and login functionality, featuring input validation, secure authentication using JWT, logging mechanisms, and structured error handling. It ensures robust security and efficient user management for authentication-based applications.",
     image: "/images/tasks.png",
     techStack: [{ icon: Github }, { icon: Github }, { icon: GitBranch }],
   },
   {
     title: "Binary-Problem",
+    description:
+      "A coding challenge solution focused on binary number manipulation, implemented in JavaScript. It processes binary input to solve a specific computational problem efficiently, showcasing algorithmic logic and problem-solving skills.",
     image: "/images/tasks.png",
     techStack: [{ icon: Github }, { icon: Github }, { icon: GitBranch }],
   },
