@@ -209,7 +209,10 @@ export default function Page() {
             </div>
           </section>
 
-          <section id="experience" className="h-full flex items-center">
+          <section
+            id="experience"
+            className="h-full flex items-center bg-gradient-to-br from-background to-background/80"
+          >
             <div className="px-20 w-full">
               <motion.div
                 ref={timelineRef}
@@ -222,7 +225,7 @@ export default function Page() {
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: isInView ? 1 : 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="top-[53%] absolute left-0 w-full h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20"
+                  className="top-[53%] absolute left-0 w-full h-0.5 bg-gradient-to-r from-primary/5 via-primary/80 to-primary/5"
                 />
 
                 <div className="flex justify-between relative max-w-6xl mx-auto">
@@ -296,12 +299,12 @@ export default function Page() {
                             y: exp.position === "bottom" ? -2 : 2,
                           }}
                           transition={{ duration: 0.2 }}
-                          className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-3 hover:shadow-primary/10 hover:border-primary/50"
+                          className="bg-gradient-to-br from-background via-background/95 to-background/90 p-4 rounded-lg shadow-lg border border-primary/10 space-y-3 hover:shadow-primary/20 hover:border-primary/30 backdrop-blur-sm transition-all duration-300"
                         >
-                          <h5 className="text-lg font-semibold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                          <h5 className="text-lg font-semibold bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90 bg-clip-text text-transparent">
                             {exp.title}
                           </h5>
-                          <p className="text-gray-400 font-medium">
+                          <p className="text-primary/60 font-medium">
                             {exp.company}
                           </p>
                           <p className="text-sm text-gray-400 border-l-2 border-primary/30 pl-2">
@@ -321,7 +324,7 @@ export default function Page() {
 
           <section
             id="projects"
-            className="h-full flex items-center justify-center"
+            className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
           >
             <div className="container mx-auto px-20">
               <motion.div
@@ -345,7 +348,7 @@ export default function Page() {
                     </p>
                   </div>
                   <ScrollArea
-                    className="h-[500px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-background/30"
+                    className="h-[500px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
                     onMouseEnter={() => setIsScrollLocked(true)}
                     onMouseLeave={() => setIsScrollLocked(false)}
                   >
@@ -358,9 +361,9 @@ export default function Page() {
                           key={index}
                         >
                           <AccordionItem value={`item-${index}`}>
-                            <AccordionTrigger className="text-left hover:bg-accent/50 px-4 rounded-lg transition-colors">
+                            <AccordionTrigger className="text-left hover:bg-primary/5 px-4 rounded-lg transition-all duration-300">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-base">
+                                <span className="font-semibold text-base text-primary/80 group-hover:text-primary transition-colors">
                                   {project.title}
                                 </span>
                               </div>
@@ -370,7 +373,7 @@ export default function Page() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.2 }}
-                                className="space-y-2 px-4 border-l-2 border-primary/30"
+                                className="space-y-2 px-4 border-l-2 border-primary/20 hover:border-primary/40 transition-colors"
                               >
                                 <p className="text-sm text-muted-foreground leading-relaxed">
                                   {project.description}
@@ -394,7 +397,7 @@ export default function Page() {
                     Personal Projects
                   </h2>
                   <ScrollArea
-                    className="h-[500px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-background/30"
+                    className="h-[500px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
                     onMouseEnter={() => setIsScrollLocked(true)}
                     onMouseLeave={() => setIsScrollLocked(false)}
                   >
@@ -407,9 +410,9 @@ export default function Page() {
                           key={index}
                         >
                           <AccordionItem value={`item-${index}`}>
-                            <AccordionTrigger className="text-left hover:bg-accent/50 px-4 rounded-lg transition-colors">
+                            <AccordionTrigger className="text-left hover:bg-primary/5 px-4 rounded-lg transition-all duration-300">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-base">
+                                <span className="font-semibold text-base text-primary/80 group-hover:text-primary transition-colors">
                                   {project.title}
                                 </span>
                               </div>
@@ -419,7 +422,7 @@ export default function Page() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.2 }}
-                                className="space-y-4 px-4 border-l-2 border-primary/30"
+                                className="space-y-4 px-4 border-l-2 border-primary/20 hover:border-primary/40 transition-colors"
                               >
                                 <p className="text-sm text-muted-foreground leading-relaxed">
                                   {project.description}
@@ -452,7 +455,7 @@ export default function Page() {
 
           <section
             id="skills"
-            className="h-full flex items-center justify-center"
+            className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
           >
             <div className="container px-20 py-8">
               <motion.div
@@ -486,11 +489,11 @@ export default function Page() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                    className="group p-4 rounded-lg border bg-gradient-to-br from-background via-background to-background/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20"
+                    className="group p-4 rounded-lg border bg-gradient-to-br from-background/50 via-background/40 to-background/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 hover:from-background/60 hover:to-background/40"
                   >
                     <div className="flex items-center gap-2 mb-4">
-                      <section.icon className="w-6 h-6 text-primary" />
-                      <h3 className="text-xl font-semibold bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent">
+                      <section.icon className="w-6 h-6 text-primary/70 group-hover:text-primary transition-colors" />
+                      <h3 className="text-xl font-semibold bg-gradient-to-r from-primary/80 via-primary/60 to-primary/80 bg-clip-text text-transparent">
                         {section.title}
                       </h3>
                     </div>
