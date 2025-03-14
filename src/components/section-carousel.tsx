@@ -83,7 +83,7 @@ export function SectionCarousel({
         <div
           key={index}
           className={cn(
-            "absolute inset-0 w-full h-full transition-transform duration-500 ease-in-out",
+            "absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out",
             index === activeSection ? "z-10" : "z-0"
           )}
           style={{
