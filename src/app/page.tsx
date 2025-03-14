@@ -455,163 +455,74 @@ export default function Page() {
             className="h-full flex items-center justify-center"
           >
             <div className="container px-20 py-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
-                  <div className="flex items-center gap-2 mb-4 ml-2">
-                    <Layers className="w-6 h-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Frontend</h3>
-                  </div>
-                  <div className="grid grid-cols-4 gap-2">
-                    {frontendSkills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
-                      >
-                        {skill.isImage ? (
-                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
-                            {skill.icon}
-                          </div>
-                        ) : (
-                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
-                        )}
-                        <span className="text-xs text-center">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
-                  <div className="flex items-center gap-2 mb-4 ml-2">
-                    <Server className="w-6 h-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Backend</h3>
-                  </div>
-                  <div className="grid grid-cols-4 gap-2">
-                    {backendSkills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
-                      >
-                        {skill.isImage ? (
-                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
-                            {skill.icon}
-                          </div>
-                        ) : (
-                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
-                        )}
-                        <span className="text-xs text-center">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
-                  <div className="flex items-center gap-2 mb-4 ml-2">
-                    <Database className="w-6 h-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Databases</h3>
-                  </div>
-                  <div class="grid grid-cols-4 gap-2">
-                    {databaseSkills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
-                      >
-                        {skill.isImage ? (
-                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
-                            {skill.icon}
-                          </div>
-                        ) : (
-                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
-                        )}
-                        <span className="text-xs text-center">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
-                  <div className="flex items-center gap-2 mb-4 ml-2">
-                    <Cloud className="w-6 h-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Cloud & Server</h3>
-                  </div>
-                  <div className="grid grid-cols-4 gap-2">
-                    {cloudSkills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
-                      >
-                        {skill.isImage ? (
-                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
-                            {skill.icon}
-                          </div>
-                        ) : (
-                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
-                        )}
-                        <span className="text-xs text-center">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
-                  <div className="flex items-center gap-2 mb-4 ml-2">
-                    <Code className="w-6 h-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Web Technologies</h3>
-                  </div>
-                  <div className="grid grid-cols-4 gap-2">
-                    {webTechSkills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
-                      >
-                        {skill.isImage ? (
-                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
-                            {skill.icon}
-                          </div>
-                        ) : (
-                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
-                        )}
-                        <span className="text-xs text-center">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="p-2 rounded-lg border bg-card text-card-foreground shadow-sm">
-                  <div className="flex items-center gap-2 mb-4 ml-2">
-                    <Wrench className="w-6 h-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Other Tools</h3>
-                  </div>
-                  <div className="grid grid-cols-4 gap-2">
-                    {otherToolsSkills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent transition-colors group"
-                      >
-                        {skill.isImage ? (
-                          <div className="w-8 h-8 mb-2 group-hover:text-primary">
-                            {skill.icon}
-                          </div>
-                        ) : (
-                          <skill.icon className="w-8 h-8 mb-2 group-hover:text-primary" />
-                        )}
-                        <span className="text-xs text-center">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+              >
+                {[
+                  { title: "Frontend", icon: Layers, skills: frontendSkills },
+                  { title: "Backend", icon: Server, skills: backendSkills },
+                  {
+                    title: "Databases",
+                    icon: Database,
+                    skills: databaseSkills,
+                  },
+                  { title: "Cloud & Server", icon: Cloud, skills: cloudSkills },
+                  {
+                    title: "Web Technologies",
+                    icon: Code,
+                    skills: webTechSkills,
+                  },
+                  {
+                    title: "Other Tools",
+                    icon: Wrench,
+                    skills: otherToolsSkills,
+                  },
+                ].map((section, sectionIndex) => (
+                  <motion.div
+                    key={section.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
+                    className="group p-4 rounded-lg border bg-gradient-to-br from-background via-background to-background/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20"
+                  >
+                    <div className="flex items-center gap-2 mb-4">
+                      <section.icon className="w-6 h-6 text-primary" />
+                      <h3 className="text-xl font-semibold bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent">
+                        {section.title}
+                      </h3>
+                    </div>
+                    <div className="grid grid-cols-4 gap-3">
+                      {section.skills.map((skill, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{
+                            duration: 0.2,
+                            delay: sectionIndex * 0.1 + index * 0.05,
+                          }}
+                          whileHover={{ y: -2 }}
+                          className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent/40 transition-all duration-200 group/skill"
+                        >
+                          {skill.isImage ? (
+                            <div className="w-8 h-8 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity">
+                              {skill.icon}
+                            </div>
+                          ) : (
+                            <skill.icon className="w-8 h-8 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity text-primary/80 group-hover/skill:text-primary" />
+                          )}
+                          <span className="text-xs text-center text-muted-foreground group-hover/skill:text-primary/90 transition-colors">
+                            {skill.name}
+                          </span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
           </section>
         </SectionCarousel>
