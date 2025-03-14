@@ -181,7 +181,7 @@ export default function Page() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                       >
-                        <Label className="mt-10 text-2xl bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 transition-all duration-300">
+                        <Label className="mt-20 text-2xl bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent hover:from-violet-500 hover:via-purple-500 hover:to-fuchsia-500 transition-all duration-300">
                           Engineer by profession, problem-solver by passion,
                           explorer by heart.
                         </Label>
@@ -192,37 +192,13 @@ export default function Page() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
                       >
-                        <Label className="text-xl bg-gradient-to-r from-rose-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent hover:from-rose-500 hover:via-fuchsia-500 hover:to-indigo-500 transition-all duration-300">
+                        <Label className="text-xl bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 transition-all duration-300">
                           Full-stack developer who enjoys building robust
                           backends, leading teams, and delivering high-quality
                           applications.
                         </Label>
                       </motion.div>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-6 mt-6">
-                    <a
-                      href="https://github.com/dsquare0601"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors p-2"
-                    >
-                      <Github strokeWidth={1.5} size={24} />
-                    </a>
-                    <a
-                      href="https://linkedin.com/in/dsquare0601"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors p-2"
-                    >
-                      <Linkedin strokeWidth={1.5} size={24} />
-                    </a>
-                    <a
-                      href="mailto:darjidhaval19@gmail.com"
-                      className="text-muted-foreground hover:text-primary transition-colors p-2"
-                    >
-                      <Mail strokeWidth={1.5} size={24} />
-                    </a>
                   </div>
                 </div>
               </div>

@@ -6,7 +6,15 @@ const textGradient =
   "bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent";
 
 export function AnimatedWords() {
-  const words = ["Gamer", "Trekker", "Hiker", "Traveler", "Foodie"];
+  const words = [
+    "Gamer",
+    "Biker",
+    "Trekker",
+    "Hiker",
+    "Road Tripper",
+    "Traveler",
+    "Foodie",
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -18,7 +26,7 @@ export function AnimatedWords() {
   }, []);
 
   return (
-    <div className="relative h-[1.5em] w-32 inline-flex items-center">
+    <div className="relative h-[1.5em] w-100 inline-flex items-center">
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}

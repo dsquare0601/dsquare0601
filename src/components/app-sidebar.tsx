@@ -37,6 +37,9 @@ export function AppSidebar({
           currentSection={currentSection}
         />
       </SidebarContent>
+      <SidebarFooter>
+        <NavUser user={navbarData.user} />
+      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   );
