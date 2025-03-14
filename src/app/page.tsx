@@ -75,10 +75,10 @@ import {
   SiPostman,
   SiMui,
 } from "@icons-pack/react-simple-icons";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { SectionCarousel } from "@/components/section-carousel";
 import navbarData from "@/context/navbar.data";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { AnimatedWords } from "@/components/animated-words";
 
 // Add these styles right after imports
@@ -106,6 +106,10 @@ export default function Page() {
     );
     setSectionTitle(sectionObj?.name || "Portfolio");
   }, [section]);
+
+  // Add ref and inView state for the experience section
+  const timelineRef = useRef(null);
+  const isInView = useInView(timelineRef, { once: true });
 
   return (
     <SidebarProvider>
@@ -207,98 +211,111 @@ export default function Page() {
 
           <section id="experience" className="h-full flex items-center">
             <div className="px-20 w-full">
-              <div className="relative w-full py-32">
-                <div className="top-[53%] absolute left-0 w-full h-0.5 bg-gray-200"></div>
+              <motion.div
+                ref={timelineRef}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="relative w-full py-32"
+              >
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: isInView ? 1 : 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="top-[53%] absolute left-0 w-full h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20"
+                />
 
                 <div className="flex justify-between relative max-w-6xl mx-auto">
-                  <div className="w-100 relative group">
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
-                    <div className="absolute w-full bottom-[50%] pb-4">
-                      <div className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-2">
-                        <h5 className="text-lg font-semibold">
-                          Full Stack Development Consultant
-                        </h5>
-                        <p className="text-gray-400">Qualitésoft</p>
-                        <p className="text-sm text-gray-400">
-                          May 2023 - Present
-                        </p>
-                        <p className="text-sm text-gray-400">
-                          Built and optimized end-to-end systems, integrating
-                          batch NDA processing, rewards distribution, VIP guest
-                          management, and third-party recruiter onboarding with
-                          secure payment flows.
-                        </p>
+                  {[
+                    {
+                      title: "Full Stack Development Consultant",
+                      company: "Qualitésoft",
+                      period: "May 2023 - Present",
+                      description:
+                        "Built and optimized end-to-end systems, integrating batch NDA processing, rewards distribution, VIP guest management, and third-party recruiter onboarding with secure payment flows.",
+                      position: "bottom",
+                      width: "w-200", // Added width property
+                    },
+                    {
+                      title: "Sr. Full Stack Developer",
+                      company: "Algoscale Technologies",
+                      period: "Mar 2023 - Apr 2023",
+                      description:
+                        "Designed and deployed end-to-end full-stack solutions across 5+ projects in course management, insurance, and infrastructure domains, leveraging Node.js, React, Strapi, and AWS/Azure to build scalable applications while optimizing APIs, automating workflows, and enhancing search and analytics with Redis and Elasticsearch.",
+                      position: "top",
+                      width: "w-350", // Increased width from 160 to 200
+                    },
+                    {
+                      title: "Sr. Full Stack Developer",
+                      company: "iGenerate Technology",
+                      period: "Feb 2021 - Feb 2023",
+                      description:
+                        "Designed and deployed scalable full-stack solutions, integrating AWS services, optimizing data pipelines, mentoring freshers, and leading cross-functional teams across multiple mid-level applications.",
+                      position: "bottom",
+                      width: "w-200",
+                    },
+                    {
+                      title: "Full Stack Trainee",
+                      company: "MicroGO LLP",
+                      period: "Sep 2020 - Dec 2020",
+                      description:
+                        "Planned and developed 3 operational dashboards from scratch, leading a 5-member team while designing databases, implementing CI/CD pipelines, and building 24+ IoT-driven APIs.",
+                      position: "top",
+                      width: "w-200",
+                    },
+                  ].map((exp, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{
+                        opacity: 0,
+                        y: exp.position === "bottom" ? -20 : 20,
+                      }}
+                      animate={{
+                        opacity: isInView ? 1 : 0,
+                        y: isInView ? 0 : exp.position === "bottom" ? -20 : 20,
+                      }}
+                      transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
+                      className={`${exp.width || "w-100"} relative group`}
+                    >
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: isInView ? 1 : 0 }}
+                        transition={{ duration: 0.3, delay: 0.5 + index * 0.2 }}
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"
+                      />
+                      <div
+                        className={`absolute w-full ${
+                          exp.position === "bottom"
+                            ? "bottom-[50%] pb-4"
+                            : "top-[calc(50%+1rem)] pt-4"
+                        }`}
+                      >
+                        <motion.div
+                          whileHover={{
+                            scale: 1.02,
+                            y: exp.position === "bottom" ? -2 : 2,
+                          }}
+                          transition={{ duration: 0.2 }}
+                          className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-3 hover:shadow-primary/10 hover:border-primary/50"
+                        >
+                          <h5 className="text-lg font-semibold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                            {exp.title}
+                          </h5>
+                          <p className="text-gray-400 font-medium">
+                            {exp.company}
+                          </p>
+                          <p className="text-sm text-gray-400 border-l-2 border-primary/30 pl-2">
+                            {exp.period}
+                          </p>
+                          <p className="text-sm text-gray-400 leading-relaxed">
+                            {exp.description}
+                          </p>
+                        </motion.div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="w-[calc(var(--spacing)*160)] relative group">
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
-                    <div className="absolute w-full top-[calc(50%+1rem)] pt-4">
-                      <div className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-2">
-                        <h5 className="text-lg font-semibold">
-                          Sr. Full Stack Developer
-                        </h5>
-                        <p className="text-gray-400">Algoscale Technologies</p>
-                        <p className="text-sm text-gray-400">
-                          Mar 2023 — Aug 2024
-                        </p>
-                        <p className="text-sm text-gray-400">
-                          Designed and deployed end-to-end full-stack solutions
-                          across 5+ projects in course management, insurance,
-                          and infrastructure domains, leveraging Node.js, React,
-                          Strapi, and AWS/Azure to build scalable applications
-                          while optimizing APIs, automating workflows, and
-                          enhancing search and analytics with Redis and
-                          Elasticsearch.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-100 relative group">
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
-                    <div className="absolute w-full bottom-[50%] pb-4">
-                      <div className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-2">
-                        <h5 className="text-lg font-semibold">
-                          Sr. Full Stack Developer
-                        </h5>
-                        <p className="text-gray-400">iGenerate Technology</p>
-                        <p className="text-sm text-gray-400">
-                          Feb 2021 — Feb 2023
-                        </p>
-                        <p className="text-sm text-gray-400">
-                          Designed and deployed scalable full-stack solutions,
-                          integrating AWS services, optimizing data pipelines,
-                          mentoring freshers, and leading cross-functional teams
-                          across multiple mid-level applications.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-100 relative group">
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
-                    <div className="absolute w-full top-[calc(50%+1rem)] pt-4">
-                      <div className="bg-background p-4 rounded-lg shadow-lg border border-gray-100 space-y-2">
-                        <h5 className="text-lg font-semibold">
-                          Full Stack Trainee
-                        </h5>
-                        <p className="text-gray-400">MicroGO LLP</p>
-                        <p className="text-sm text-gray-400">
-                          Sep 2020 — Dec 2020
-                        </p>
-                        <p className="text-sm text-gray-400">
-                          Planned and developed 3 operational dashboards from
-                          scratch, leading a 5-member team while designing
-                          databases, implementing CI/CD pipelines, and building
-                          24+ IoT-driven APIs.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                    </motion.div>
+                  ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </section>
 
