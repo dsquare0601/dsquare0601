@@ -324,83 +324,129 @@ export default function Page() {
             className="h-full flex items-center justify-center"
           >
             <div className="container mx-auto px-20">
-              <div className="grid grid-cols-2 gap-8">
-                <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="grid grid-cols-2 gap-8"
+              >
+                <motion.div
+                  initial={{ x: -50 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="space-y-4"
+                >
                   <div className="grid grid-cols-2 items-end">
-                    <h2 className="text-3xl font-bold">
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                       Professional Projects
                     </h2>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground italic">
                       Mock Names due to NDA
                     </p>
                   </div>
                   <ScrollArea
-                    className="h-[500px] border rounded-lg p-4 scroll-area"
+                    className="h-[500px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-background/30"
                     onMouseEnter={() => setIsScrollLocked(true)}
                     onMouseLeave={() => setIsScrollLocked(false)}
                   >
                     <Accordion type="single" collapsible className="space-y-2">
                       {professionalProjects.map((project, index) => (
-                        <AccordionItem key={index} value={`item-${index}`}>
-                          <AccordionTrigger className="text-left">
-                            <div className="flex flex-col">
-                              <span className="font-semibold text-base">
-                                {project.title}
-                              </span>
-                            </div>
-                          </AccordionTrigger>
-                          <AccordionContent>
-                            <div className="space-y-2 px-4">
-                              <p className="text-sm text-muted-foreground">
-                                {project.description}
-                              </p>
-                            </div>
-                          </AccordionContent>
-                        </AccordionItem>
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          key={index}
+                        >
+                          <AccordionItem value={`item-${index}`}>
+                            <AccordionTrigger className="text-left hover:bg-accent/50 px-4 rounded-lg transition-colors">
+                              <div className="flex flex-col">
+                                <span className="font-semibold text-base bg-gradient-to-r from-primary/80 to-primary/40 bg-clip-text text-transparent">
+                                  {project.title}
+                                </span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                              <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.2 }}
+                                className="space-y-2 px-4 border-l-2 border-primary/30"
+                              >
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                  {project.description}
+                                </p>
+                              </motion.div>
+                            </AccordionContent>
+                          </AccordionItem>
+                        </motion.div>
                       ))}
                     </Accordion>
                   </ScrollArea>
-                </div>
+                </motion.div>
 
-                <div className="space-y-4">
-                  <h2 className="text-3xl font-bold">Personal Projects</h2>
+                <motion.div
+                  initial={{ x: 50 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="space-y-4"
+                >
+                  <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                    Personal Projects
+                  </h2>
                   <ScrollArea
-                    className="h-[500px] border rounded-lg p-4 scroll-area"
+                    className="h-[500px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-background/30"
                     onMouseEnter={() => setIsScrollLocked(true)}
                     onMouseLeave={() => setIsScrollLocked(false)}
                   >
                     <Accordion type="single" collapsible className="space-y-2">
                       {personalProjects.map((project, index) => (
-                        <AccordionItem key={index} value={`item-${index}`}>
-                          <AccordionTrigger className="text-left">
-                            <div className="flex flex-col">
-                              <span className="font-semibold  text-base">
-                                {project.title}
-                              </span>
-                            </div>
-                          </AccordionTrigger>
-                          <AccordionContent>
-                            <div className="space-y-4 px-4">
-                              <p className="text-sm text-muted-foreground">
-                                {project.description}
-                              </p>
-                              {project.image && (
-                                <Image
-                                  src={project.image}
-                                  alt={project.title}
-                                  width={300}
-                                  height={200}
-                                  className="rounded-lg"
-                                />
-                              )}
-                            </div>
-                          </AccordionContent>
-                        </AccordionItem>
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          key={index}
+                        >
+                          <AccordionItem value={`item-${index}`}>
+                            <AccordionTrigger className="text-left hover:bg-accent/50 px-4 rounded-lg transition-colors">
+                              <div className="flex flex-col">
+                                <span className="font-semibold text-base bg-gradient-to-r from-primary/80 to-primary/40 bg-clip-text text-transparent">
+                                  {project.title}
+                                </span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                              <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.2 }}
+                                className="space-y-4 px-4 border-l-2 border-primary/30"
+                              >
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                  {project.description}
+                                </p>
+                                {project.image && (
+                                  <motion.div
+                                    whileHover={{ scale: 1.02 }}
+                                    transition={{ duration: 0.2 }}
+                                  >
+                                    <Image
+                                      src={project.image}
+                                      alt={project.title}
+                                      width={300}
+                                      height={200}
+                                      className="rounded-lg shadow-lg"
+                                    />
+                                  </motion.div>
+                                )}
+                              </motion.div>
+                            </AccordionContent>
+                          </AccordionItem>
+                        </motion.div>
                       ))}
                     </Accordion>
                   </ScrollArea>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </section>
 
