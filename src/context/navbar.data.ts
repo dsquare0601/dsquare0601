@@ -1,4 +1,10 @@
-import { Frame, Map, PieChart } from "lucide-react";
+import {
+  PersonStandingIcon,
+  NotebookTextIcon,
+  ChartNoAxesColumnIncreasingIcon,
+  CodeIcon,
+  SendIcon,
+} from "lucide-react";
 
 export default {
   user: {
@@ -10,28 +16,28 @@ export default {
     {
       name: "About Me!",
       url: "#about-me",
-      icon: Frame,
+      icon: PersonStandingIcon,
       isActive: true,
     },
     {
       name: "Experience",
       url: "#experience",
-      icon: PieChart,
+      icon: ChartNoAxesColumnIncreasingIcon,
     },
     {
       name: "Projects",
       url: "#projects",
-      icon: Map,
+      icon: NotebookTextIcon,
     },
     {
       name: "Skills & Tools",
       url: "#skills",
-      icon: Map,
+      icon: CodeIcon,
     },
     {
       name: "Contact Me",
       url: "#contact-me",
-      icon: Map,
+      icon: SendIcon,
     },
   ],
 };
