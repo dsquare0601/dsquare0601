@@ -360,7 +360,7 @@ export default function Page() {
                           <AccordionItem value={`item-${index}`}>
                             <AccordionTrigger className="text-left hover:bg-accent/50 px-4 rounded-lg transition-colors">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-base bg-gradient-to-r from-primary/80 to-primary/40 bg-clip-text text-transparent">
+                                <span className="font-semibold text-base">
                                   {project.title}
                                 </span>
                               </div>
@@ -409,7 +409,7 @@ export default function Page() {
                           <AccordionItem value={`item-${index}`}>
                             <AccordionTrigger className="text-left hover:bg-accent/50 px-4 rounded-lg transition-colors">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-base bg-gradient-to-r from-primary/80 to-primary/40 bg-clip-text text-transparent">
+                                <span className="font-semibold text-base">
                                   {project.title}
                                 </span>
                               </div>
