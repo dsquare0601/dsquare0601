@@ -82,6 +82,7 @@ import navbarData from "@/context/navbar.data";
 export default function Page() {
   const [section, setSection] = useState("about-me");
   const [sectionTitle, setSectionTitle] = useState("About Me!");
+  const [isScrollLocked, setIsScrollLocked] = useState(false);
 
   const handleSectionChange = (newSection: string) => {
     setSection(newSection);
@@ -115,6 +116,7 @@ export default function Page() {
         <SectionCarousel
           setSection={handleSectionChange}
           currentSection={section}
+          isScrollLocked={isScrollLocked}
         >
           <section id="about-me" className="h-full flex items-center">
             <div className="px-20 h-full flex items-center">
@@ -293,7 +295,11 @@ export default function Page() {
                       Mock Names due to NDA
                     </p>
                   </div>
-                  <ScrollArea className="h-[500px] border rounded-lg p-4">
+                  <ScrollArea
+                    className="h-[500px] border rounded-lg p-4 scroll-area"
+                    onMouseEnter={() => setIsScrollLocked(true)}
+                    onMouseLeave={() => setIsScrollLocked(false)}
+                  >
                     <Accordion type="single" collapsible className="space-y-2">
                       {professionalProjects.map((project, index) => (
                         <AccordionItem key={index} value={`item-${index}`}>
@@ -319,7 +325,11 @@ export default function Page() {
 
                 <div className="space-y-4">
                   <h2 className="text-3xl font-bold">Personal Projects</h2>
-                  <ScrollArea className="h-[500px] border rounded-lg p-4">
+                  <ScrollArea
+                    className="h-[500px] border rounded-lg p-4 scroll-area"
+                    onMouseEnter={() => setIsScrollLocked(true)}
+                    onMouseLeave={() => setIsScrollLocked(false)}
+                  >
                     <Accordion type="single" collapsible className="space-y-2">
                       {personalProjects.map((project, index) => (
                         <AccordionItem key={index} value={`item-${index}`}>
@@ -418,7 +428,7 @@ export default function Page() {
                     <Database className="w-6 h-6 text-primary" />
                     <h3 className="text-xl font-semibold">Databases</h3>
                   </div>
-                  <div className="grid grid-cols-4 gap-2">
+                  <div class="grid grid-cols-4 gap-2">
                     {databaseSkills.map((skill, index) => (
                       <div
                         key={index}

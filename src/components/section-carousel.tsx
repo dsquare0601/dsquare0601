@@ -7,12 +7,14 @@ interface SectionCarouselProps {
   children: React.ReactNode[];
   setSection: (sectionId: string) => void;
   currentSection: string;
+  isScrollLocked: boolean;
 }
 
 export function SectionCarousel({
   children,
   setSection,
   currentSection,
+  isScrollLocked,
 }: SectionCarouselProps) {
   const [activeSection, setActiveSection] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -47,6 +49,8 @@ export function SectionCarousel({
     let scrollTimeout: NodeJS.Timeout;
 
     const handleScroll = (e: WheelEvent) => {
+      if (isScrollLocked) return;
+
       e.preventDefault();
 
       if (isTransitioning) return;
@@ -68,7 +72,7 @@ export function SectionCarousel({
       container.removeEventListener("wheel", handleScroll);
       clearTimeout(scrollTimeout);
     };
-  }, [activeSection, children.length, isTransitioning]);
+  }, [activeSection, children.length, isTransitioning, isScrollLocked]);
 
   return (
     <div
