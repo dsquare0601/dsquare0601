@@ -78,6 +78,18 @@ import {
 import { useEffect, useState } from "react";
 import { SectionCarousel } from "@/components/section-carousel";
 import navbarData from "@/context/navbar.data";
+import { motion } from "framer-motion";
+import { AnimatedWords } from "@/components/animated-words";
+
+// Add these styles right after imports
+const textGradients = {
+  primary:
+    "bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent",
+  secondary:
+    "bg-gradient-to-r from-pink-400 to-orange-400 bg-clip-text text-transparent",
+  accent:
+    "bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent",
+};
 
 export default function Page() {
   const [section, setSection] = useState("about-me");
@@ -119,18 +131,76 @@ export default function Page() {
           isScrollLocked={isScrollLocked}
         >
           <section id="about-me" className="h-full flex items-center">
-            <div className="px-20 h-full flex items-center">
-              <div className="grid items-center gap-8">
-                <div className="relative w-[500px] h-auto overflow-hidden md:col-start-1 justify-items-center">
-                  <Image
-                    src="/images/hi.png"
-                    alt="Profile photo"
-                    width={250}
-                    height={250}
-                    className="rounded-none"
-                    priority
-                  />
-                  <div className="flex justify-center items-center space-x-6 mt-6">
+            <div className="px-40 h-full flex items-center min-h-screen">
+              <div className="grid gap-12">
+                <div className="md:col-start-1">
+                  <div>
+                    <div className="flex flex-col space-y-2">
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="min-h-[100px]" // Increased from 80px to 100px
+                      >
+                        <Label className="text-8xl leading-[1.15] block pb-2">
+                          G'day,{" "}
+                          <span
+                            className={`${textGradients.primary} font-bold`}
+                          >
+                            I'm Dhaval Darji
+                          </span>
+                        </Label>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                      >
+                        <Label
+                          className={`text-7xl ${textGradients.secondary}`}
+                        >
+                          Full Stack Web Developer
+                        </Label>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.4 }}
+                      >
+                        <Label
+                          className={`text-4xl ${textGradients.accent} flex items-center gap-2`}
+                        >
+                          On the weekend, I'm a <AnimatedWords />
+                        </Label>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                      >
+                        <Label className="mt-10 text-2xl bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 transition-all duration-300">
+                          Engineer by profession, problem-solver by passion,
+                          explorer by heart.
+                        </Label>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.8 }}
+                      >
+                        <Label className="text-xl bg-gradient-to-r from-rose-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent hover:from-rose-500 hover:via-fuchsia-500 hover:to-indigo-500 transition-all duration-300">
+                          Full-stack developer who enjoys building robust
+                          backends, leading teams, and delivering high-quality
+                          applications.
+                        </Label>
+                      </motion.div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-6 mt-6">
                     <a
                       href="https://github.com/dsquare0601"
                       target="_blank"
@@ -153,30 +223,6 @@ export default function Page() {
                     >
                       <Mail strokeWidth={1.5} size={24} />
                     </a>
-                  </div>
-                </div>
-                <div className="md:col-start-2">
-                  <div>
-                    <div className="flex flex-col space-y-2">
-                      <Label className="text-6xl">
-                        G’day, I’m Dhaval Darji
-                      </Label>
-                      <Label className="text-5xl">
-                        Full Stack Web Developer
-                      </Label>
-                      <Label className="text-3xl">
-                        And Gamer / Trekker / Hiker / Traveler / Foodie.
-                      </Label>
-                      <Label className="text-2xl">
-                        Engineer by profession, problem-solver by passion,
-                        explorer by heart.
-                      </Label>
-                      <Label>
-                        Full-stack developer who enjoys building robust
-                        backends, leading teams, and delivering high-quality
-                        applications.
-                      </Label>
-                    </div>
                   </div>
                 </div>
               </div>
