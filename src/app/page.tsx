@@ -135,8 +135,8 @@ export default function Page() {
           isScrollLocked={isScrollLocked}
         >
           <section id="about-me" className="h-full flex items-center">
-            <div className="px-40 h-full flex items-center min-h-screen">
-              <div className="grid gap-12">
+            <div className="px-4 sm:px-8 md:px-16 lg:px-40 h-full flex items-center min-h-screen">
+              <div className="grid gap-6 md:gap-12">
                 <div className="md:col-start-1">
                   <div>
                     <div className="flex flex-col space-y-2">
@@ -144,9 +144,9 @@ export default function Page() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="min-h-[100px]" // Increased from 80px to 100px
+                        className=""
                       >
-                        <Label className="text-8xl leading-[1.15] block pb-2">
+                        <Label className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-7xl 2xl:text-[10rem] leading-[1.15] block pb-2">
                           G'day,{" "}
                           <span
                             className={`${textGradients.primary} font-bold`}
@@ -162,7 +162,7 @@ export default function Page() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                       >
                         <Label
-                          className={`text-7xl ${textGradients.secondary}`}
+                          className={`text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl ${textGradients.secondary}`}
                         >
                           Full Stack Web Developer
                         </Label>
@@ -174,7 +174,7 @@ export default function Page() {
                         transition={{ duration: 0.7, delay: 0.4 }}
                       >
                         <Label
-                          className={`text-4xl ${textGradients.accent} flex items-center gap-2`}
+                          className={`text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl ${textGradients.accent} flex items-center gap-2`}
                         >
                           On the weekend, I'm a <AnimatedWords />
                         </Label>
@@ -185,7 +185,7 @@ export default function Page() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                       >
-                        <Label className="mt-20 text-2xl bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent hover:from-violet-500 hover:via-purple-500 hover:to-fuchsia-500 transition-all duration-300">
+                        <Label className="mt-20 text-base sm:text-xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent hover:from-violet-500 hover:via-purple-500 hover:to-fuchsia-500 transition-all duration-300">
                           Engineer by profession, problem-solver by passion,
                           explorer by heart.
                         </Label>
@@ -196,7 +196,7 @@ export default function Page() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
                       >
-                        <Label className="text-xl bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 transition-all duration-300">
+                        <Label className="text-sm sm:text-lg md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 transition-all duration-300">
                           Full-stack developer who enjoys building robust
                           backends, leading teams, and delivering high-quality
                           applications.
@@ -213,13 +213,13 @@ export default function Page() {
             id="experience"
             className="h-full flex items-center bg-gradient-to-br from-background to-background/80"
           >
-            <div className="px-20 w-full">
+            <div className="px-4 sm:px-8 md:px-16 lg:px-20 w-full">
               <motion.div
                 ref={timelineRef}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="relative w-full py-32"
+                className="relative w-full py-16 md:py-32"
               >
                 <motion.div
                   initial={{ scaleX: 0 }}
@@ -228,7 +228,7 @@ export default function Page() {
                   className="top-[53%] absolute left-0 w-full h-0.5 bg-gradient-to-r from-primary/5 via-primary/80 to-primary/5"
                 />
 
-                <div className="flex justify-between relative max-w-6xl mx-auto">
+                <div className="flex flex-col md:flex-row justify-between relative max-w-6xl mx-auto gap-8 md:gap-4">
                   {[
                     {
                       title: "Full Stack Development Consultant",
@@ -237,7 +237,7 @@ export default function Page() {
                       description:
                         "Built and optimized end-to-end systems, integrating batch NDA processing, rewards distribution, VIP guest management, and third-party recruiter onboarding with secure payment flows.",
                       position: "bottom",
-                      width: "w-200", // Added width property
+                      width: "w-full md:w-1/4",
                     },
                     {
                       title: "Sr. Full Stack Developer",
@@ -246,7 +246,7 @@ export default function Page() {
                       description:
                         "Designed and deployed end-to-end full-stack solutions across 5+ projects in course management, insurance, and infrastructure domains, leveraging Node.js, React, Strapi, and AWS/Azure to build scalable applications while optimizing APIs, automating workflows, and enhancing search and analytics with Redis and Elasticsearch.",
                       position: "top",
-                      width: "w-350", // Increased width from 160 to 200
+                      width: "w-full md:w-1/4",
                     },
                     {
                       title: "Sr. Full Stack Developer",
@@ -255,7 +255,7 @@ export default function Page() {
                       description:
                         "Designed and deployed scalable full-stack solutions, integrating AWS services, optimizing data pipelines, mentoring freshers, and leading cross-functional teams across multiple mid-level applications.",
                       position: "bottom",
-                      width: "w-200",
+                      width: "w-full md:w-1/4",
                     },
                     {
                       title: "Full Stack Trainee",
@@ -264,7 +264,7 @@ export default function Page() {
                       description:
                         "Planned and developed 3 operational dashboards from scratch, leading a 5-member team while designing databases, implementing CI/CD pipelines, and building 24+ IoT-driven APIs.",
                       position: "top",
-                      width: "w-200",
+                      width: "w-full md:w-1/4",
                     },
                   ].map((exp, index) => (
                     <motion.div
@@ -278,7 +278,9 @@ export default function Page() {
                         y: isInView ? 0 : exp.position === "bottom" ? -20 : 20,
                       }}
                       transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
-                      className={`${exp.width || "w-100"} relative group`}
+                      className={`${
+                        exp.width || "w-full md:w-1/4"
+                      } relative group`}
                     >
                       <motion.div
                         initial={{ scale: 0 }}
@@ -326,12 +328,12 @@ export default function Page() {
             id="projects"
             className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
           >
-            <div className="container mx-auto px-20">
+            <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-2 gap-8"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8"
               >
                 <motion.div
                   initial={{ x: -50 }}
@@ -457,12 +459,12 @@ export default function Page() {
             id="skills"
             className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
           >
-            <div className="container px-20 py-8">
+            <div className="container px-4 sm:px-8 md:px-16 lg:px-20 py-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-7xl mx-auto"
               >
                 {[
                   { title: "Frontend", icon: Layers, skills: frontendSkills },
@@ -489,7 +491,7 @@ export default function Page() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                    className="group p-4 rounded-lg border bg-gradient-to-br from-background/50 via-background/40 to-background/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 hover:from-background/60 hover:to-background/40"
+                    className="group p-3 md:p-4 rounded-lg border bg-gradient-to-br from-background/50 via-background/40 to-background/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 hover:from-background/60 hover:to-background/40"
                   >
                     <div className="flex items-center gap-2 mb-4">
                       <section.icon className="w-6 h-6 text-primary/70 group-hover:text-primary transition-colors" />
@@ -497,7 +499,7 @@ export default function Page() {
                         {section.title}
                       </h3>
                     </div>
-                    <div className="grid grid-cols-4 gap-3">
+                    <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 md:gap-3">
                       {section.skills.map((skill, index) => (
                         <motion.div
                           key={index}

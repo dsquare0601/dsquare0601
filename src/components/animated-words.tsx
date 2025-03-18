@@ -26,7 +26,7 @@ export function AnimatedWords() {
   }, []);
 
   return (
-    <div className="relative h-[1.5em] w-100 inline-flex items-center">
+    <div className="relative h-[1.5em] ml-[1rem] w-auto inline-flex items-center">
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
@@ -34,7 +34,7 @@ export function AnimatedWords() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className={`absolute font-bold ${textGradient}`}
+          className={`absolute text-nowrap w-auto font-bold ${textGradient}`}
         >
           {words[currentIndex]}
         </motion.span>
