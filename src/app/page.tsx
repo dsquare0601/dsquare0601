@@ -460,12 +460,12 @@ export default function Page() {
             id="skills"
             className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
           >
-            <div className="container px-4 sm:px-8 md:px-16 lg:px-20 py-8">
+            <div className="container px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-8 min-h-screen flex items-center w-full max-w-[1800px]">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-7xl mx-auto"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 w-full"
               >
                 {[
                   { title: "Frontend", icon: Layers, skills: frontendSkills },
@@ -492,15 +492,15 @@ export default function Page() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                    className="group p-3 md:p-4 rounded-lg border bg-gradient-to-br from-background/50 via-background/40 to-background/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 hover:from-background/60 hover:to-background/40"
+                    className="group p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg border bg-gradient-to-br from-background/50 via-background/40 to-background/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 hover:from-background/60 hover:to-background/40"
                   >
-                    <div className="flex items-center gap-2 mb-4">
-                      <section.icon className="w-6 h-6 text-primary/70 group-hover:text-primary transition-colors" />
-                      <h3 className="text-xl font-semibold bg-gradient-to-r from-primary/80 via-primary/60 to-primary/80 bg-clip-text text-transparent">
+                    <div className="flex items-center gap-3 mb-4">
+                      <section.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary/70 group-hover:text-primary transition-colors" />
+                      <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold bg-gradient-to-r from-primary/80 via-primary/60 to-primary/80 bg-clip-text text-transparent">
                         {section.title}
                       </h3>
                     </div>
-                    <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 md:gap-3">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
                       {section.skills.map((skill, index) => (
                         <motion.div
                           key={index}
@@ -511,16 +511,16 @@ export default function Page() {
                             delay: sectionIndex * 0.1 + index * 0.05,
                           }}
                           whileHover={{ y: -2 }}
-                          className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-accent/40 transition-all duration-200 group/skill"
+                          className="flex flex-col items-center justify-center p-2 sm:p-2.5 md:p-3 rounded-lg hover:bg-accent/40 transition-all duration-200 group/skill"
                         >
                           {skill.isImage ? (
-                            <div className="w-8 h-8 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity">
+                            <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity">
                               {skill.icon}
                             </div>
                           ) : (
-                            <skill.icon className="w-8 h-8 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity text-primary/80 group-hover/skill:text-primary" />
+                            <skill.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity text-primary/80 group-hover/skill:text-primary" />
                           )}
-                          <span className="text-xs text-center text-muted-foreground group-hover/skill:text-primary/90 transition-colors">
+                          <span className="text-xs sm:text-sm lg:text-base text-center text-muted-foreground group-hover/skill:text-primary/90 transition-colors">
                             {skill.name}
                           </span>
                         </motion.div>
