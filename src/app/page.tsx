@@ -1,4 +1,5 @@
 "use client";
+import "./page.css";
 import { Github, Linkedin, Mail, Globe, GitBranch } from "lucide-react";
 import { AppSidebar } from "@/components/app-sidebar";
 import {
@@ -146,7 +147,7 @@ export default function Page() {
                         transition={{ duration: 0.5 }}
                         className=""
                       >
-                        <Label className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-7xl 2xl:text-[10rem] leading-[1.15] block pb-2">
+                        <Label className="custom-heading flex flex-wrap text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-7xl 2xl:text-[10rem] leading-[1.15] pb-2">
                           G'day,{" "}
                           <span
                             className={`${textGradients.primary} font-bold`}
