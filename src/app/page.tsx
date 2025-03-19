@@ -329,12 +329,12 @@ export default function Page() {
             id="projects"
             className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
           >
-            <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20">
+            <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-60 w-full max-w-[2000px]">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12"
               >
                 <motion.div
                   initial={{ x: -50 }}
@@ -351,7 +351,7 @@ export default function Page() {
                     </p>
                   </div>
                   <ScrollArea
-                    className="h-[500px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
+                    className="h-[500px] xl:h-[600px] 2xl:h-[800px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
                     onMouseEnter={() => setIsScrollLocked(true)}
                     onMouseLeave={() => setIsScrollLocked(false)}
                   >
@@ -400,7 +400,7 @@ export default function Page() {
                     Personal Projects
                   </h2>
                   <ScrollArea
-                    className="h-[500px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
+                    className="h-[500px] xl:h-[600px] 2xl:h-[800px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
                     onMouseEnter={() => setIsScrollLocked(true)}
                     onMouseLeave={() => setIsScrollLocked(false)}
                   >
