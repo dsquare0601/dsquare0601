@@ -1,5 +1,4 @@
 "use client";
-import "./page.css";
 import { Github, Linkedin, Mail, Globe, GitBranch } from "lucide-react";
 import { AppSidebar } from "@/components/app-sidebar";
 import {
