@@ -87,7 +87,7 @@ export default function Content() {
           {/* Experience */}
           <div className="h-screen flex items-center snap-start">
             <div
-              className="max-h-[80vh] overflow-y-auto p-8 scrollbar-thin"
+              className="max-h-screen overflow-y-auto p-8 scrollbar-thin"
               onScroll={handleSectionScroll}
             >
               <h4 className="text-xl mb-6 top-0 bg-white z-10">Experience</h4>
@@ -365,7 +365,7 @@ export default function Content() {
           {/* Work/Projects */}
           <div className="h-screen flex items-center snap-start">
             <div
-              className="max-h-[80vh] overflow-y-auto p-8 scrollbar-thin"
+              className="max-h-screen overflow-y-auto p-8 scrollbar-thin"
               onScroll={handleSectionScroll}
             >
               <h4 className="text-xl mb-6 top-0 bg-white z-10">
@@ -449,7 +449,7 @@ export default function Content() {
           {/* Skills */}
           <div className="h-screen flex items-center snap-start">
             <div
-              className="max-h-[80vh] overflow-y-auto p-8 scrollbar-thin"
+              className="max-h-screen overflow-y-auto p-8 scrollbar-thin"
               onScroll={handleSectionScroll}
             >
               <h4 className="text-xl mb-6 top-0 bg-white z-10">Skills</h4>
