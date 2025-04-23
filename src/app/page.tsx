@@ -90,6 +90,19 @@ const textGradients = {
   accent:
     "bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent",
 };
+const testClass =
+  "sm:bg-red-700 md:bg-lime-700 lg:bg-sky-700 xl:bg-violet-700 2xl:bg-slate-700";
+
+const textClassesExperience = {
+  title:
+    "text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-2xl font-semibold bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90 bg-clip-text text-transparent",
+  company:
+    "md:text-sm lg:text-sm xl:text-sm 2xl:text-lg text-primary/60 font-medium",
+  period:
+    "text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-xl text-gray-400 border-l-2 border-primary/30 pl-2",
+  description:
+    "text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-xl text-gray-400 leading-relaxed",
+};
 
 export default function Page() {
   const [section, setSection] = useState("about-me");
@@ -134,7 +147,10 @@ export default function Page() {
           currentSection={section}
           isScrollLocked={isScrollLocked}
         >
-          <section id="about-me" className="h-full flex items-center">
+          <section
+            id="about-me"
+            className={`h-full flex items-center ${testClass}`}
+          >
             <div className="px-4 sm:px-8 md:px-16 lg:px-40 h-full flex items-center min-h-screen">
               <div className="grid gap-6 md:gap-12">
                 <div className="md:col-start-1">
@@ -211,7 +227,7 @@ export default function Page() {
 
           <section
             id="experience"
-            className="h-full flex items-center bg-gradient-to-br from-background to-background/80"
+            className={`h-full flex items-center bg-gradient-to-br from-background to-background/80 ${testClass}`}
           >
             <div className="px-4 sm:px-8 md:px-16 lg:px-20 w-full">
               <motion.div
@@ -228,7 +244,7 @@ export default function Page() {
                   className="top-[53%] absolute left-0 w-full h-0.5 bg-gradient-to-r from-primary/5 via-primary/80 to-primary/5"
                 />
 
-                <div className="w-[70%] flex flex-col md:flex-row justify-between relative max-w-6xl gap-8 md:gap-4">
+                <div className="w-[80%] flex flex-col md:flex-row justify-between relative mr-auto gap-8 md:gap-4">
                   {[
                     {
                       title: "Full Stack Development Consultant",
@@ -237,7 +253,8 @@ export default function Page() {
                       description:
                         "Built and optimized end-to-end systems, integrating batch NDA processing, rewards distribution, VIP guest management, and third-party recruiter onboarding with secure payment flows.",
                       position: "bottom",
-                      width: "w-full md:w-[35%]",
+                      width:
+                        "w-full md:w-[35%] lg:w-[30%] xl:w-[30%] 2xl:w-[40%]",
                     },
 
                     {
@@ -247,7 +264,8 @@ export default function Page() {
                       description:
                         "Designed and deployed scalable full-stack solutions, integrating AWS services, optimizing data pipelines, mentoring freshers, and leading cross-functional teams across multiple mid-level applications.",
                       position: "bottom",
-                      width: "w-full md:w-[35%]",
+                      width:
+                        "w-full md:w-[35%] lg:w-[38%] xl:w-[30%] 2xl:w-[40%]",
                     },
                   ].map((exp, index) => (
                     <motion.div
@@ -286,16 +304,16 @@ export default function Page() {
                           transition={{ duration: 0.2 }}
                           className="bg-gradient-to-br from-background via-background/95 to-background/90 p-4 rounded-lg shadow-lg border border-primary/10 space-y-3 hover:shadow-primary/20 hover:border-primary/30 backdrop-blur-sm transition-all duration-300"
                         >
-                          <h5 className="text-lg font-semibold bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90 bg-clip-text text-transparent">
+                          <h5 className={textClassesExperience.title}>
                             {exp.title}
                           </h5>
-                          <p className="text-primary/60 font-medium">
+                          <p className={textClassesExperience.company}>
                             {exp.company}
                           </p>
-                          <p className="text-sm text-gray-400 border-l-2 border-primary/30 pl-2">
+                          <p className={textClassesExperience.period}>
                             {exp.period}
                           </p>
-                          <p className="text-sm text-gray-400 leading-relaxed">
+                          <p className={textClassesExperience.description}>
                             {exp.description}
                           </p>
                         </motion.div>
@@ -303,7 +321,7 @@ export default function Page() {
                     </motion.div>
                   ))}
                 </div>
-                <div className="w-[70%] flex flex-col md:flex-row justify-between relative max-w-6xl mx-auto gap-8 md:gap-4">
+                <div className="w-[80%] lg:w-[85%] xl:w-[80%] 2xl:w-[80%] flex flex-col md:flex-row justify-between relative ml-auto gap-8 md:gap-4">
                   {[
                     {
                       title: "Sr. Full Stack Developer",
@@ -312,7 +330,8 @@ export default function Page() {
                       description:
                         "Designed and deployed end-to-end full-stack solutions across 5+ projects in course management, insurance, and infrastructure domains, leveraging Node.js, React, Strapi, and AWS/Azure to build scalable applications while optimizing APIs, automating workflows, and enhancing search and analytics with Redis and Elasticsearch.",
                       position: "top",
-                      width: "w-full md:w-[35%]",
+                      width:
+                        "w-full md:w-[50%] lg:w-[55%] xl:w-[50%] 2xl:w-[40%]",
                     },
                     {
                       title: "Full Stack Trainee",
@@ -321,7 +340,8 @@ export default function Page() {
                       description:
                         "Planned and developed 3 operational dashboards from scratch, leading a 5-member team while designing databases, implementing CI/CD pipelines, and building 24+ IoT-driven APIs.",
                       position: "top",
-                      width: "w-full md:w-[35%]",
+                      width:
+                        "w-full md:w-[35%] lg:w-[30%] xl:w-[30%] 2xl:w-[40%]",
                     },
                   ].map((exp, index) => (
                     <motion.div
@@ -360,16 +380,16 @@ export default function Page() {
                           transition={{ duration: 0.2 }}
                           className="bg-gradient-to-br from-background via-background/95 to-background/90 p-4 rounded-lg shadow-lg border border-primary/10 space-y-3 hover:shadow-primary/20 hover:border-primary/30 backdrop-blur-sm transition-all duration-300"
                         >
-                          <h5 className="text-lg font-semibold bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90 bg-clip-text text-transparent">
+                          <h5 className={textClassesExperience.title}>
                             {exp.title}
                           </h5>
-                          <p className="text-primary/60 font-medium">
+                          <p className={textClassesExperience.company}>
                             {exp.company}
                           </p>
-                          <p className="text-sm text-gray-400 border-l-2 border-primary/30 pl-2">
+                          <p className={textClassesExperience.period}>
                             {exp.period}
                           </p>
-                          <p className="text-sm text-gray-400 leading-relaxed">
+                          <p className={textClassesExperience.description}>
                             {exp.description}
                           </p>
                         </motion.div>
@@ -383,7 +403,7 @@ export default function Page() {
 
           <section
             id="projects"
-            className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
+            className={`h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90 ${testClass}`}
           >
             <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-60 w-full max-w-[2000px]">
               <motion.div
@@ -514,7 +534,7 @@ export default function Page() {
 
           <section
             id="skills"
-            className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
+            className={`h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90 ${testClass}`}
           >
             <div className="container px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-8 min-h-screen flex items-center w-full max-w-[1800px]">
               <motion.div
