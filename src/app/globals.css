@@ -7,6 +7,10 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 140rem;
+  --breakpoint-5xl: 160rem;
 }
 
 :root {
