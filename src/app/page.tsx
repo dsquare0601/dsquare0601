@@ -228,7 +228,7 @@ export default function Page() {
                   className="top-[53%] absolute left-0 w-full h-0.5 bg-gradient-to-r from-primary/5 via-primary/80 to-primary/5"
                 />
 
-                <div className="flex flex-col md:flex-row justify-between relative max-w-6xl mx-auto gap-8 md:gap-4">
+                <div className="w-[70%] flex flex-col md:flex-row justify-between relative max-w-6xl gap-8 md:gap-4">
                   {[
                     {
                       title: "Full Stack Development Consultant",
@@ -237,17 +237,9 @@ export default function Page() {
                       description:
                         "Built and optimized end-to-end systems, integrating batch NDA processing, rewards distribution, VIP guest management, and third-party recruiter onboarding with secure payment flows.",
                       position: "bottom",
-                      width: "w-full md:w-1/4",
+                      width: "w-full md:w-[35%]",
                     },
-                    {
-                      title: "Sr. Full Stack Developer",
-                      company: "Algoscale Technologies",
-                      period: "Mar 2023 - Apr 2023",
-                      description:
-                        "Designed and deployed end-to-end full-stack solutions across 5+ projects in course management, insurance, and infrastructure domains, leveraging Node.js, React, Strapi, and AWS/Azure to build scalable applications while optimizing APIs, automating workflows, and enhancing search and analytics with Redis and Elasticsearch.",
-                      position: "top",
-                      width: "w-full md:w-1/4",
-                    },
+
                     {
                       title: "Sr. Full Stack Developer",
                       company: "iGenerate Technology",
@@ -255,16 +247,7 @@ export default function Page() {
                       description:
                         "Designed and deployed scalable full-stack solutions, integrating AWS services, optimizing data pipelines, mentoring freshers, and leading cross-functional teams across multiple mid-level applications.",
                       position: "bottom",
-                      width: "w-full md:w-1/4",
-                    },
-                    {
-                      title: "Full Stack Trainee",
-                      company: "MicroGO LLP",
-                      period: "Sep 2020 - Dec 2020",
-                      description:
-                        "Planned and developed 3 operational dashboards from scratch, leading a 5-member team while designing databases, implementing CI/CD pipelines, and building 24+ IoT-driven APIs.",
-                      position: "top",
-                      width: "w-full md:w-1/4",
+                      width: "w-full md:w-[35%]",
                     },
                   ].map((exp, index) => (
                     <motion.div
@@ -279,7 +262,81 @@ export default function Page() {
                       }}
                       transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
                       className={`${
-                        exp.width || "w-full md:w-1/4"
+                        exp.width || "w-full md:w-[35%]"
+                      } relative group`}
+                    >
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: isInView ? 1 : 0 }}
+                        transition={{ duration: 0.3, delay: 0.5 + index * 0.2 }}
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"
+                      />
+                      <div
+                        className={`absolute w-full ${
+                          exp.position === "bottom"
+                            ? "bottom-[50%] pb-4"
+                            : "top-[calc(50%+1rem)] pt-4"
+                        }`}
+                      >
+                        <motion.div
+                          whileHover={{
+                            scale: 1.02,
+                            y: exp.position === "bottom" ? -2 : 2,
+                          }}
+                          transition={{ duration: 0.2 }}
+                          className="bg-gradient-to-br from-background via-background/95 to-background/90 p-4 rounded-lg shadow-lg border border-primary/10 space-y-3 hover:shadow-primary/20 hover:border-primary/30 backdrop-blur-sm transition-all duration-300"
+                        >
+                          <h5 className="text-lg font-semibold bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90 bg-clip-text text-transparent">
+                            {exp.title}
+                          </h5>
+                          <p className="text-primary/60 font-medium">
+                            {exp.company}
+                          </p>
+                          <p className="text-sm text-gray-400 border-l-2 border-primary/30 pl-2">
+                            {exp.period}
+                          </p>
+                          <p className="text-sm text-gray-400 leading-relaxed">
+                            {exp.description}
+                          </p>
+                        </motion.div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="w-[70%] flex flex-col md:flex-row justify-between relative max-w-6xl mx-auto gap-8 md:gap-4">
+                  {[
+                    {
+                      title: "Sr. Full Stack Developer",
+                      company: "Algoscale Technologies",
+                      period: "Mar 2023 - Apr 2023",
+                      description:
+                        "Designed and deployed end-to-end full-stack solutions across 5+ projects in course management, insurance, and infrastructure domains, leveraging Node.js, React, Strapi, and AWS/Azure to build scalable applications while optimizing APIs, automating workflows, and enhancing search and analytics with Redis and Elasticsearch.",
+                      position: "top",
+                      width: "w-full md:w-[35%]",
+                    },
+                    {
+                      title: "Full Stack Trainee",
+                      company: "MicroGO LLP",
+                      period: "Sep 2020 - Dec 2020",
+                      description:
+                        "Planned and developed 3 operational dashboards from scratch, leading a 5-member team while designing databases, implementing CI/CD pipelines, and building 24+ IoT-driven APIs.",
+                      position: "top",
+                      width: "w-full md:w-[35%]",
+                    },
+                  ].map((exp, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{
+                        opacity: 0,
+                        y: exp.position === "bottom" ? -20 : 20,
+                      }}
+                      animate={{
+                        opacity: isInView ? 1 : 0,
+                        y: isInView ? 0 : exp.position === "bottom" ? -20 : 20,
+                      }}
+                      transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
+                      className={`${
+                        exp.width || "w-full md:w-[35%]"
                       } relative group`}
                     >
                       <motion.div
