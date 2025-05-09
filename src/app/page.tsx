@@ -405,7 +405,7 @@ export default function Page() {
             id="projects"
             className={`h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90 ${testClass}`}
           >
-            <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-60 w-full max-w-[2000px]">
+            <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-60 w-full">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -418,11 +418,11 @@ export default function Page() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="space-y-4"
                 >
-                  <div className="grid grid-cols-2 items-end">
-                    <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                  <div className="grid grid-rows-2 items-end">
+                    <h2 className="text-3xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-3xl 3xl:text-3xl 4xl:text-3xl 5xl:text-5xl 6xl:text-7xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                       Professional Projects
                     </h2>
-                    <p className="text-sm text-muted-foreground italic">
+                    <p className="text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground italic">
                       Mock Names due to NDA
                     </p>
                   </div>
@@ -442,7 +442,7 @@ export default function Page() {
                           <AccordionItem value={`item-${index}`}>
                             <AccordionTrigger className="text-left hover:bg-primary/5 px-4 rounded-lg transition-all duration-300">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-base text-primary/80 group-hover:text-primary transition-colors">
+                                <span className="font-semibold text-base md:text-base lg:text-base xl:text-base 2xl:text-base 3xl:text-base 4xl:text-base 5xl:text-2xl 6xl:text-4xl text-primary/80 group-hover:text-primary transition-colors">
                                   {project.title}
                                 </span>
                               </div>
@@ -454,7 +454,7 @@ export default function Page() {
                                 transition={{ duration: 0.2 }}
                                 className="space-y-2 px-4 border-l-2 border-primary/20 hover:border-primary/40 transition-colors"
                               >
-                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                <p className="text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground leading-relaxed">
                                   {project.description}
                                 </p>
                               </motion.div>
@@ -472,9 +472,14 @@ export default function Page() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="space-y-4"
                 >
-                  <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                    Personal Projects
-                  </h2>
+                  <div className="grid grid-rows-2 items-end">
+                    <h2 className="text-3xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-3xl 3xl:text-3xl 4xl:text-3xl 5xl:text-5xl 6xl:text-7xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                      Personal Projects
+                    </h2>
+                    <p className="invisible text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground italic">
+                      Mock Names due to NDA
+                    </p>
+                  </div>
                   <ScrollArea
                     className="h-[500px] xl:h-[600px] 2xl:h-[800px] border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
                     onMouseEnter={() => setIsScrollLocked(true)}
@@ -491,7 +496,7 @@ export default function Page() {
                           <AccordionItem value={`item-${index}`}>
                             <AccordionTrigger className="text-left hover:bg-primary/5 px-4 rounded-lg transition-all duration-300">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-base text-primary/80 group-hover:text-primary transition-colors">
+                                <span className="font-semibold text-base md:text-base lg:text-base xl:text-base 2xl:text-base 3xl:text-base 4xl:text-base 5xl:text-2xl 6xl:text-4xl text-primary/80 group-hover:text-primary transition-colors">
                                   {project.title}
                                 </span>
                               </div>
@@ -503,7 +508,7 @@ export default function Page() {
                                 transition={{ duration: 0.2 }}
                                 className="space-y-4 px-4 border-l-2 border-primary/20 hover:border-primary/40 transition-colors"
                               >
-                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                <p className="text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground leading-relaxed">
                                   {project.description}
                                 </p>
                                 {project.image && (
