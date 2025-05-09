@@ -11,6 +11,7 @@
   --breakpoint-3xl: 120rem;
   --breakpoint-4xl: 140rem;
   --breakpoint-5xl: 160rem;
+  --breakpoint-6xl: 200rem;
 }
 
 :root {
