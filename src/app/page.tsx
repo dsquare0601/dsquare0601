@@ -95,13 +95,13 @@ const testClass =
 
 const textClassesExperience = {
   title:
-    "text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-2xl 3xl:text-2xl 4xl:text-3xl font-semibold bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90 bg-clip-text text-transparent",
+    "text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl font-semibold bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90 bg-clip-text text-transparent",
   company:
-    "md:text-sm lg:text-sm xl:text-sm 2xl:text-lg 3xl:text-lg 4xl:text-xl text-primary/60 font-medium",
+    "md:text-sm lg:text-sm xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl text-primary/60 font-medium",
   period:
-    "text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-xl 3xl:text-xl 4xl:text-2xl text-gray-400 border-l-2 border-primary/30 pl-2",
+    "text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base 3xl:text-xl 4xl:text-2xl text-gray-400 border-l-2 border-primary/30 pl-2",
   description:
-    "text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-xl 3xl:text-xl 4xl:text-2xl text-gray-400 leading-relaxed",
+    "text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base 3xl:text-xl 4xl:text-2xl text-gray-400 leading-relaxed",
 };
 
 export default function Page() {
