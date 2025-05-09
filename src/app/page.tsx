@@ -162,7 +162,7 @@ export default function Page() {
                         transition={{ duration: 0.5 }}
                         className=""
                       >
-                        <Label className="custom-heading flex flex-wrap text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-7xl 2xl:text-[10rem] 3xl:text-[10rem] 4xl:text-[10rem] 5xl:text-[10rem] 6xl:text-[16rem] leading-[1.15] pb-2">
+                        <Label className="custom-heading flex flex-wrap text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-7xl 2xl:text-8xl 3xl:text-[10rem] 4xl:text-[10rem] 5xl:text-[10rem] 6xl:text-[16rem] leading-[1.15] pb-2">
                           G'day,{" "}
                           <span
                             className={`${textGradients.primary} font-bold`}
@@ -178,7 +178,7 @@ export default function Page() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                       >
                         <Label
-                          className={`text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl 3xl:text-8xl 4xl:text-8xl 5xl:text-8xl 6xl:text-[10rem] ${textGradients.secondary}`}
+                          className={`text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl 4xl:text-8xl 5xl:text-8xl 6xl:text-[10rem] ${textGradients.secondary}`}
                         >
                           Full Stack Web Developer
                         </Label>
@@ -190,7 +190,7 @@ export default function Page() {
                         transition={{ duration: 0.7, delay: 0.4 }}
                       >
                         <Label
-                          className={`text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl 3xl:text-7xl 4xl:text-7xl 5xl:text-7xl 6xl:text-8xl ${textGradients.accent} flex items-center gap-2`}
+                          className={`text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl 4xl:text-7xl 5xl:text-7xl 6xl:text-8xl ${textGradients.accent} flex items-center gap-2`}
                         >
                           On the weekend, I'm a <AnimatedWords />
                         </Label>
@@ -201,7 +201,7 @@ export default function Page() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                       >
-                        <Label className="mt-20 text-base sm:text-xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl 3xl:text-5xl 4xl:text-5xl 5xl:text-5xl 6xl:text-6xl bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent hover:from-violet-500 hover:via-purple-500 hover:to-fuchsia-500 transition-all duration-300">
+                        <Label className="mt-20 2xl:mt-10 text-base sm:text-xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl 3xl:text-5xl 4xl:text-5xl 5xl:text-5xl 6xl:text-6xl bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent hover:from-violet-500 hover:via-purple-500 hover:to-fuchsia-500 transition-all duration-300">
                           Engineer by profession, problem-solver by passion,
                           explorer by heart.
                         </Label>
