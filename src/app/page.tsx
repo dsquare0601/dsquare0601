@@ -541,12 +541,12 @@ export default function Page() {
             id="skills"
             className={`h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90 ${testClass}`}
           >
-            <div className="container px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-8 min-h-screen flex items-center w-full max-w-[1800px]">
+            <div className="container px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-8 min-h-screen flex items-center w-full">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 w-full"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-6 6xl:gap-14 w-full"
               >
                 {[
                   { title: "Frontend", icon: Layers, skills: frontendSkills },
@@ -573,15 +573,15 @@ export default function Page() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                    className="group p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg border bg-gradient-to-br from-background/50 via-background/40 to-background/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 hover:from-background/60 hover:to-background/40"
+                    className="group p-3 sm:p-4 md:p-5 lg:p-3 xl:p-3 2xl:p-3 3xl:p-3 4xl:p-3 5xl:p-4 6xl:p-8 rounded-lg border bg-gradient-to-br from-background/50 via-background/40 to-background/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 hover:from-background/60 hover:to-background/40"
                   >
-                    <div className="flex items-center gap-3 mb-4">
-                      <section.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary/70 group-hover:text-primary transition-colors" />
-                      <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold bg-gradient-to-r from-primary/80 via-primary/60 to-primary/80 bg-clip-text text-transparent">
+                    <div className="flex items-center gap-3 mb-4 lg:mb-2 xl:mb-4 5xl:mb-6 6xl:mb-10">
+                      <section.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-7 md:h-7 lg:w-5 lg:h-5 xl:w-5 xl:h-5 2xl:w-5 2xl:h-5 3xl:w-5 3xl:h-5 4xl:w-5 4xl:h-5 5xl:w-10 5xl:h-10 6xl:w-14 6xl:h-14 text-primary/70 group-hover:text-primary transition-colors" />
+                      <h3 className="text-lg sm:text-xl md:text-xl lg:text-lg xl:text-xl 2xl:text-3xl 3xl:text-3xl 4xl:text-3xl 5xl:text-4xl 6xl:text-6xl font-semibold bg-gradient-to-r from-primary/80 via-primary/60 to-primary/80 bg-clip-text text-transparent">
                         {section.title}
                       </h3>
                     </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
+                    <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-1 xl:gap-2 2xl:gap-2 3xl:gap-2 4xl:gap-2 5xl:gap-6 6xl:gap-6">
                       {section.skills.map((skill, index) => (
                         <motion.div
                           key={index}
@@ -592,16 +592,16 @@ export default function Page() {
                             delay: sectionIndex * 0.1 + index * 0.05,
                           }}
                           whileHover={{ y: -2 }}
-                          className="flex flex-col items-center justify-center p-2 sm:p-2.5 md:p-3 rounded-lg hover:bg-accent/40 transition-all duration-200 group/skill"
+                          className="flex flex-col items-center justify-center p-2 sm:p-2.5 md:p-3 lg:p-1 xl:p-2 2xl:p-2 3xl:p-2 4xl:p-2 5xl:p-4 6xl:p-4 rounded-lg hover:bg-accent/40 transition-all duration-200 group/skill"
                         >
                           {skill.isImage ? (
-                            <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity">
+                            <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-6 lg:h-6 xl:w-6 xl:h-6 2xl:w-6 2xl:h-6 3xl:w-8 3xl:h-8 4xl:w-6 4xl:h-6 5xl:w-12 5xl:h-12 6xl:w-24 6xl:h-24 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity">
                               {skill.icon}
                             </div>
                           ) : (
-                            <skill.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity text-primary/80 group-hover/skill:text-primary" />
+                            <skill.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-6 lg:h-6 xl:w-6 xl:h-6 2xl:w-6 2xl:h-6 3xl:w-8 3xl:h-8 4xl:w-6 4xl:h-6 5xl:w-12 5xl:h-12 6xl:w-24 6xl:h-24 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity text-primary/80 group-hover/skill:text-primary" />
                           )}
-                          <span className="text-xs sm:text-sm lg:text-base text-center text-muted-foreground group-hover/skill:text-primary/90 transition-colors">
+                          <span className="text-xs sm:text-sm lg:text-xs xl:text-sm 2xl:text-sm 3xl:text-lg 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-center text-muted-foreground group-hover/skill:text-primary/90 transition-colors">
                             {skill.name}
                           </span>
                         </motion.div>
