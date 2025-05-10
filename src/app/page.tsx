@@ -215,6 +215,41 @@ export default function Page() {
                           applications.
                         </Label>
                       </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.8 }}
+                      >
+                        <div className="3xl:mt-15 4xl:mt-15 5xl:mt-15 6xl:mt-25 mt-15 grid grid-cols-3 text-green-300 sm:mt-5 md:mt-5 lg:mt-5 xl:mt-10 2xl:mt-10">
+                          <div className="flex flex-col">
+                            <Label className="3xl:text-[6rem] 4xl:text-[8rem] 5xl:text-[8rem] 6xl:text-[12rem] text-7xl font-bold sm:text-3xl md:text-3xl lg:text-3xl xl:text-6xl 2xl:text-7xl">
+                              4.5+
+                            </Label>
+                            <Label className="3xl:text-2xl 4xl:text-base 5xl:text-3xl 6xl:text-4xl text-base sm:text-base md:text-base lg:text-xs xl:text-base 2xl:text-base">
+                              Years Of Experience
+                            </Label>
+                          </div>
+
+                          <div className="flex flex-col">
+                            <Label className="3xl:text-[6rem] 4xl:text-[8rem] 5xl:text-[8rem] 6xl:text-[12rem] text-7xl font-bold sm:text-3xl md:text-3xl lg:text-3xl xl:text-6xl 2xl:text-7xl">
+                              20+
+                            </Label>
+                            <Label className="3xl:text-2xl 4xl:text-base 5xl:text-3xl 6xl:text-4xl text-base sm:text-base md:text-base lg:text-xs xl:text-base 2xl:text-base">
+                              Projects Completed
+                            </Label>
+                          </div>
+
+                          <div className="flex flex-col">
+                            <Label className="3xl:text-[6rem] 4xl:text-[8rem] 5xl:text-[8rem] 6xl:text-[12rem] text-7xl font-bold sm:text-3xl md:text-3xl lg:text-3xl xl:text-6xl 2xl:text-7xl">
+                              15+
+                            </Label>
+                            <Label className="3xl:text-2xl 4xl:text-base 5xl:text-3xl 6xl:text-4xl text-base sm:text-base md:text-base lg:text-xs xl:text-base 2xl:text-base">
+                              Languages & Frameworks
+                            </Label>
+                          </div>
+                        </div>
+                      </motion.div>
                     </div>
                   </div>
                 </div>
