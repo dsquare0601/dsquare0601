@@ -577,7 +577,7 @@ export default function Page() {
                   >
                     <div className="flex items-center gap-3 mb-4 lg:mb-2 xl:mb-4 5xl:mb-6 6xl:mb-10">
                       <section.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-7 md:h-7 lg:w-5 lg:h-5 xl:w-5 xl:h-5 2xl:w-5 2xl:h-5 3xl:w-5 3xl:h-5 4xl:w-5 4xl:h-5 5xl:w-10 5xl:h-10 6xl:w-14 6xl:h-14 text-primary/70 group-hover:text-primary transition-colors" />
-                      <h3 className="text-lg sm:text-xl md:text-xl lg:text-lg xl:text-xl 2xl:text-3xl 3xl:text-3xl 4xl:text-3xl 5xl:text-4xl 6xl:text-6xl font-semibold bg-gradient-to-r from-primary/80 via-primary/60 to-primary/80 bg-clip-text text-transparent">
+                      <h3 className="text-lg sm:text-xl md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-3xl 5xl:text-4xl 6xl:text-6xl font-semibold bg-gradient-to-r from-primary/80 via-primary/60 to-primary/80 bg-clip-text text-transparent">
                         {section.title}
                       </h3>
                     </div>
