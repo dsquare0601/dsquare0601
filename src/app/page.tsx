@@ -90,8 +90,6 @@ const textGradients = {
   accent:
     "bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent",
 };
-const testClass =
-  "sm:bg-red-700 md:bg-lime-700 lg:bg-sky-700 xl:bg-violet-700 2xl:bg-slate-700";
 
 const textClassesExperience = {
   title:
@@ -149,10 +147,7 @@ export default function Page() {
           currentSection={section}
           isScrollLocked={isScrollLocked}
         >
-          <section
-            id="about-me"
-            className={`h-full flex items-center ${testClass}`}
-          >
+          <section id="about-me" className="h-full flex items-center">
             <div className="px-4 sm:px-8 md:px-16 lg:px-40 h-full flex items-center min-h-screen">
               <div className="grid gap-6 md:gap-12">
                 <div className="md:col-start-1">
@@ -229,7 +224,7 @@ export default function Page() {
 
           <section
             id="experience"
-            className={`h-full flex items-center bg-gradient-to-br from-background to-background/80 ${testClass}`}
+            className="h-full flex items-center bg-gradient-to-br from-background to-background/80"
           >
             <div className="px-4 sm:px-8 md:px-16 lg:px-20 w-full">
               <motion.div
@@ -405,7 +400,7 @@ export default function Page() {
 
           <section
             id="projects"
-            className={`h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90 ${testClass}`}
+            className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
           >
             <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-60 w-full">
               <motion.div
@@ -541,7 +536,7 @@ export default function Page() {
 
           <section
             id="skills"
-            className={`h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90 ${testClass}`}
+            className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
           >
             <div className="container px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-8 min-h-screen flex items-center w-full">
               <motion.div
