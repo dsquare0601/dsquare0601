@@ -113,7 +113,7 @@ export default function Page() {
 
   useEffect(() => {
     const sectionObj = navbarData.sections.find(
-      (s) => s.url.replace("#", "") === section
+      (s) => s.url.replace("#", "") === section,
     );
     setSectionTitle(sectionObj?.name || "Portfolio");
   }, [section]);
@@ -126,14 +126,14 @@ export default function Page() {
     <SidebarProvider>
       <AppSidebar setSection={handleSectionChange} currentSection={section} />
       <SidebarInset>
-        <header className="sticky top-0 z-50 flex h-16 sm:h-16 md:h-16 lg:h-12 xl:h-12 2xl:h-16 3xl:h-16 4xl:h-16 5xl:h-22 6xl:h-24 shrink-0 items-center gap-2">
+        <header className="3xl:h-16 4xl:h-16 5xl:h-22 6xl:h-24 sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2 sm:h-16 md:h-16 lg:h-12 xl:h-12 2xl:h-16">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbPage className="text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-xl 3xl:text-xl 4xl:text-xl 5xl:text-xl 6xl:text-3xl">
+                  <BreadcrumbPage className="3xl:text-xl 4xl:text-xl 5xl:text-xl 6xl:text-3xl text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-xl">
                     {sectionTitle}
                   </BreadcrumbPage>
                 </BreadcrumbItem>
@@ -147,8 +147,8 @@ export default function Page() {
           currentSection={section}
           isScrollLocked={isScrollLocked}
         >
-          <section id="about-me" className="h-full flex items-center">
-            <div className="px-4 sm:px-8 md:px-16 lg:px-40 h-full flex items-center min-h-screen">
+          <section id="about-me" className="flex h-full items-center">
+            <div className="flex h-full min-h-screen items-center px-4 sm:px-8 md:px-16 lg:px-40">
               <div className="grid gap-6 md:gap-12">
                 <div className="md:col-start-1">
                   <div>
@@ -159,7 +159,7 @@ export default function Page() {
                         transition={{ duration: 0.5 }}
                         className=""
                       >
-                        <Label className="custom-heading flex flex-wrap text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-7xl 2xl:text-8xl 3xl:text-[8rem] 4xl:text-[10rem] 5xl:text-[10rem] 6xl:text-[16rem] leading-[1.15] pb-2">
+                        <Label className="custom-heading 3xl:text-[8rem] 4xl:text-[10rem] 5xl:text-[10rem] 6xl:text-[16rem] flex flex-wrap pb-2 text-2xl leading-[1.15] sm:text-4xl md:text-4xl lg:text-4xl xl:text-7xl 2xl:text-8xl">
                           G'day,{" "}
                           <span
                             className={`${textGradients.primary} font-bold`}
@@ -175,7 +175,7 @@ export default function Page() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                       >
                         <Label
-                          className={`text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl 3xl:text-7xl 4xl:text-8xl 5xl:text-8xl 6xl:text-[10rem] ${textGradients.secondary}`}
+                          className={`3xl:text-7xl 4xl:text-8xl 5xl:text-8xl 6xl:text-[10rem] text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl ${textGradients.secondary}`}
                         >
                           Full Stack Web Developer
                         </Label>
@@ -187,7 +187,7 @@ export default function Page() {
                         transition={{ duration: 0.7, delay: 0.4 }}
                       >
                         <Label
-                          className={`text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl 3xl:text-6xl 4xl:text-7xl 5xl:text-7xl 6xl:text-8xl ${textGradients.accent} flex items-center gap-2`}
+                          className={`3xl:text-6xl 4xl:text-7xl 5xl:text-7xl 6xl:text-8xl text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl ${textGradients.accent} flex items-center gap-2`}
                         >
                           On the weekend, I'm a <AnimatedWords />
                         </Label>
@@ -198,7 +198,7 @@ export default function Page() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                       >
-                        <Label className="mt-20 sm:mt-5 md:mt-5 lg:mt-5 xl:mt-5 2xl:mt-10 3xl:mt-10 4xl:mt-10 5xl:mt-10 6xl:mt-10 text-base sm:text-xl md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl 5xl:text-5xl 6xl:text-6xl bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent hover:from-violet-500 hover:via-purple-500 hover:to-fuchsia-500 transition-all duration-300">
+                        <Label className="3xl:mt-10 4xl:mt-10 5xl:mt-10 6xl:mt-10 3xl:text-4xl 4xl:text-5xl 5xl:text-5xl 6xl:text-6xl mt-20 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-base text-transparent transition-all duration-300 hover:from-violet-500 hover:via-purple-500 hover:to-fuchsia-500 sm:mt-5 sm:text-xl md:mt-5 md:text-xl lg:mt-5 lg:text-2xl xl:mt-5 xl:text-2xl 2xl:mt-10 2xl:text-3xl">
                           Engineer by profession, problem-solver by passion,
                           explorer by heart.
                         </Label>
@@ -209,7 +209,7 @@ export default function Page() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
                       >
-                        <Label className="text-sm sm:text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-3xl 4xl:text-4xl 5xl:text-4xl 6xl:text-6xl bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 transition-all duration-300">
+                        <Label className="3xl:text-3xl 4xl:text-4xl 5xl:text-4xl 6xl:text-6xl bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-sm text-transparent transition-all duration-300 hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 sm:text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
                           Full-stack developer who enjoys building robust
                           backends, leading teams, and delivering high-quality
                           applications.
@@ -224,9 +224,9 @@ export default function Page() {
 
           <section
             id="experience"
-            className="h-full flex items-center bg-gradient-to-br from-background to-background/80"
+            className="from-background to-background/80 flex h-full items-center bg-gradient-to-br"
           >
-            <div className="px-4 sm:px-8 md:px-16 lg:px-20 w-full">
+            <div className="w-full px-4 sm:px-8 md:px-16 lg:px-20">
               <motion.div
                 ref={timelineRef}
                 initial={{ opacity: 0 }}
@@ -238,10 +238,10 @@ export default function Page() {
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: isInView ? 1 : 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="top-[53%] absolute left-0 w-full h-0.5 bg-gradient-to-r from-primary/5 via-primary/80 to-primary/5"
+                  className="from-primary/5 via-primary/80 to-primary/5 absolute top-[53%] left-0 h-0.5 w-full bg-gradient-to-r"
                 />
 
-                <div className="w-[80%] flex flex-col md:flex-row justify-between relative mr-auto gap-8 md:gap-4">
+                <div className="relative mr-auto flex w-[80%] flex-col justify-between gap-8 md:flex-row md:gap-4">
                   {[
                     {
                       title: "Full Stack Development Consultant",
@@ -278,13 +278,13 @@ export default function Page() {
                       transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
                       className={`${
                         exp.width || "w-full md:w-[35%]"
-                      } relative group`}
+                      } group relative`}
                     >
                       <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: isInView ? 1 : 0 }}
                         transition={{ duration: 0.3, delay: 0.5 + index * 0.2 }}
-                        className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"
+                        className="bg-primary absolute top-1/2 left-1/2 h-4 w-4 -translate-x-1/2 rounded-full"
                       />
                       <div
                         className={`absolute w-full ${
@@ -299,7 +299,7 @@ export default function Page() {
                             y: exp.position === "bottom" ? -2 : 2,
                           }}
                           transition={{ duration: 0.2 }}
-                          className="bg-gradient-to-br from-background via-background/95 to-background/90 p-4 rounded-lg shadow-lg border border-primary/10 space-y-3 hover:shadow-primary/20 hover:border-primary/30 backdrop-blur-sm transition-all duration-300"
+                          className="from-background via-background/95 to-background/90 border-primary/10 hover:shadow-primary/20 hover:border-primary/30 space-y-3 rounded-lg border bg-gradient-to-br p-4 shadow-lg backdrop-blur-sm transition-all duration-300"
                         >
                           <h5 className={textClassesExperience.title}>
                             {exp.title}
@@ -318,7 +318,7 @@ export default function Page() {
                     </motion.div>
                   ))}
                 </div>
-                <div className="w-[80%] lg:w-[85%] xl:w-[80%] 2xl:w-[80%] flex flex-col md:flex-row justify-between relative ml-auto gap-8 md:gap-4">
+                <div className="relative ml-auto flex w-[80%] flex-col justify-between gap-8 md:flex-row md:gap-4 lg:w-[85%] xl:w-[80%] 2xl:w-[80%]">
                   {[
                     {
                       title: "Sr. Full Stack Developer",
@@ -354,13 +354,13 @@ export default function Page() {
                       transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
                       className={`${
                         exp.width || "w-full md:w-[35%]"
-                      } relative group`}
+                      } group relative`}
                     >
                       <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: isInView ? 1 : 0 }}
                         transition={{ duration: 0.3, delay: 0.5 + index * 0.2 }}
-                        className="absolute left-1/2 top-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary"
+                        className="bg-primary absolute top-1/2 left-1/2 h-4 w-4 -translate-x-1/2 rounded-full"
                       />
                       <div
                         className={`absolute w-full ${
@@ -375,7 +375,7 @@ export default function Page() {
                             y: exp.position === "bottom" ? -2 : 2,
                           }}
                           transition={{ duration: 0.2 }}
-                          className="bg-gradient-to-br from-background via-background/95 to-background/90 p-4 rounded-lg shadow-lg border border-primary/10 space-y-3 hover:shadow-primary/20 hover:border-primary/30 backdrop-blur-sm transition-all duration-300"
+                          className="from-background via-background/95 to-background/90 border-primary/10 hover:shadow-primary/20 hover:border-primary/30 space-y-3 rounded-lg border bg-gradient-to-br p-4 shadow-lg backdrop-blur-sm transition-all duration-300"
                         >
                           <h5 className={textClassesExperience.title}>
                             {exp.title}
@@ -400,14 +400,14 @@ export default function Page() {
 
           <section
             id="projects"
-            className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
+            className="from-background via-background/95 to-background/90 flex h-full items-center justify-center bg-gradient-to-br"
           >
-            <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-60 w-full">
+            <div className="container mx-auto w-full px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-60">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12"
+                className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:gap-12"
               >
                 <motion.div
                   initial={{ x: -50 }}
@@ -416,15 +416,15 @@ export default function Page() {
                   className="space-y-4"
                 >
                   <div className="grid grid-rows-2 items-end">
-                    <h2 className="text-3xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-2xl 3xl:text-3xl 4xl:text-3xl 5xl:text-5xl 6xl:text-7xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                    <h2 className="3xl:text-3xl 4xl:text-3xl 5xl:text-5xl 6xl:text-7xl from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-3xl font-bold text-transparent md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-2xl">
                       Professional Projects
                     </h2>
-                    <p className="text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground italic">
+                    <p className="3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground text-sm italic md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">
                       Mock Names due to NDA
                     </p>
                   </div>
                   <ScrollArea
-                    className="h-[500px] xl:h-[600px] 2xl:h-[600px] 3xl:h-auto 4xl:h-[800px] 5xl:h-auto 6xl:h-auto border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
+                    className="3xl:h-auto 4xl:h-[800px] 5xl:h-auto 6xl:h-auto scroll-area from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 border-primary/10 hover:border-primary/20 h-[500px] rounded-lg border bg-gradient-to-br p-4 backdrop-blur-sm transition-all duration-300 xl:h-[600px] 2xl:h-[600px]"
                     onMouseEnter={() => setIsScrollLocked(true)}
                     onMouseLeave={() => setIsScrollLocked(false)}
                   >
@@ -437,9 +437,9 @@ export default function Page() {
                           key={index}
                         >
                           <AccordionItem value={`item-${index}`}>
-                            <AccordionTrigger className="text-left hover:bg-primary/5 px-4 5xl:py-5 6xl:py-10 rounded-lg transition-all duration-300">
+                            <AccordionTrigger className="hover:bg-primary/5 5xl:py-5 6xl:py-10 rounded-lg px-4 text-left transition-all duration-300">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-base md:text-base lg:text-base xl:text-base 2xl:text-base 3xl:text-base 4xl:text-base 5xl:text-2xl 6xl:text-4xl text-primary/80 group-hover:text-primary transition-colors">
+                                <span className="3xl:text-base 4xl:text-base 5xl:text-2xl 6xl:text-4xl text-primary/80 group-hover:text-primary text-base font-semibold transition-colors md:text-base lg:text-base xl:text-base 2xl:text-base">
                                   {project.title}
                                 </span>
                               </div>
@@ -449,9 +449,9 @@ export default function Page() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.2 }}
-                                className="space-y-2 px-4 border-l-2 border-primary/20 hover:border-primary/40 transition-colors"
+                                className="border-primary/20 hover:border-primary/40 space-y-2 border-l-2 px-4 transition-colors"
                               >
-                                <p className="text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground leading-relaxed">
+                                <p className="3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground text-sm leading-relaxed md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">
                                   {project.description}
                                 </p>
                               </motion.div>
@@ -470,15 +470,15 @@ export default function Page() {
                   className="space-y-4"
                 >
                   <div className="grid grid-rows-2 items-end">
-                    <h2 className="text-3xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-2xl 3xl:text-3xl 4xl:text-3xl 5xl:text-5xl 6xl:text-7xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                    <h2 className="3xl:text-3xl 4xl:text-3xl 5xl:text-5xl 6xl:text-7xl from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-3xl font-bold text-transparent md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-2xl">
                       Personal Projects
                     </h2>
-                    <p className="invisible text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground italic">
+                    <p className="3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground invisible text-sm italic md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">
                       Mock Names due to NDA
                     </p>
                   </div>
                   <ScrollArea
-                    className="h-[500px] xl:h-[600px] 2xl:h-[600px] 3xl:h-auto 4xl:h-[800px] 5xl:h-auto 6xl:h-auto border rounded-lg p-4 scroll-area backdrop-blur-sm bg-gradient-to-br from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 transition-all duration-300 border-primary/10 hover:border-primary/20"
+                    className="3xl:h-auto 4xl:h-[800px] 5xl:h-auto 6xl:h-auto scroll-area from-background/40 via-background/30 to-background/20 hover:from-background/50 hover:to-background/30 border-primary/10 hover:border-primary/20 h-[500px] rounded-lg border bg-gradient-to-br p-4 backdrop-blur-sm transition-all duration-300 xl:h-[600px] 2xl:h-[600px]"
                     onMouseEnter={() => setIsScrollLocked(true)}
                     onMouseLeave={() => setIsScrollLocked(false)}
                   >
@@ -491,9 +491,9 @@ export default function Page() {
                           key={index}
                         >
                           <AccordionItem value={`item-${index}`}>
-                            <AccordionTrigger className="text-left hover:bg-primary/5 px-4 5xl:py-5 6xl:py-10 rounded-lg transition-all duration-300">
+                            <AccordionTrigger className="hover:bg-primary/5 5xl:py-5 6xl:py-10 rounded-lg px-4 text-left transition-all duration-300">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-base md:text-base lg:text-base xl:text-base 2xl:text-base 3xl:text-base 4xl:text-base 5xl:text-2xl 6xl:text-4xl text-primary/80 group-hover:text-primary transition-colors">
+                                <span className="3xl:text-base 4xl:text-base 5xl:text-2xl 6xl:text-4xl text-primary/80 group-hover:text-primary text-base font-semibold transition-colors md:text-base lg:text-base xl:text-base 2xl:text-base">
                                   {project.title}
                                 </span>
                               </div>
@@ -503,9 +503,9 @@ export default function Page() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.2 }}
-                                className="space-y-4 px-4 border-l-2 border-primary/20 hover:border-primary/40 transition-colors"
+                                className="border-primary/20 hover:border-primary/40 space-y-4 border-l-2 px-4 transition-colors"
                               >
-                                <p className="text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground leading-relaxed">
+                                <p className="3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground text-sm leading-relaxed md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">
                                   {project.description}
                                 </p>
                                 {project.image && (
@@ -536,14 +536,14 @@ export default function Page() {
 
           <section
             id="skills"
-            className="h-full flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90"
+            className="from-background via-background/95 to-background/90 flex h-full items-center justify-center bg-gradient-to-br"
           >
-            <div className="container px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-8 min-h-screen flex items-center w-full">
+            <div className="container flex min-h-screen w-full items-center px-4 py-8 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-6 6xl:gap-14 w-full"
+                className="6xl:gap-14 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:gap-5 lg:grid-cols-3 lg:gap-6 xl:gap-6"
               >
                 {[
                   { title: "Frontend", icon: Layers, skills: frontendSkills },
@@ -570,15 +570,15 @@ export default function Page() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                    className="group p-3 sm:p-4 md:p-5 lg:p-3 xl:p-3 2xl:p-3 3xl:p-3 4xl:p-3 5xl:p-4 6xl:p-8 rounded-lg border bg-gradient-to-br from-background/50 via-background/40 to-background/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 hover:from-background/60 hover:to-background/40"
+                    className="group 3xl:p-3 4xl:p-3 5xl:p-4 6xl:p-8 from-background/50 via-background/40 to-background/30 hover:border-primary/20 hover:from-background/60 hover:to-background/40 rounded-lg border bg-gradient-to-br p-3 shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md sm:p-4 md:p-5 lg:p-3 xl:p-3 2xl:p-3"
                   >
-                    <div className="flex items-center gap-3 mb-4 lg:mb-2 xl:mb-4 5xl:mb-6 6xl:mb-10">
-                      <section.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-7 md:h-7 lg:w-5 lg:h-5 xl:w-5 xl:h-5 2xl:w-5 2xl:h-5 3xl:w-5 3xl:h-5 4xl:w-5 4xl:h-5 5xl:w-10 5xl:h-10 6xl:w-14 6xl:h-14 text-primary/70 group-hover:text-primary transition-colors" />
-                      <h3 className="text-lg sm:text-xl md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-3xl 5xl:text-4xl 6xl:text-6xl font-semibold bg-gradient-to-r from-primary/80 via-primary/60 to-primary/80 bg-clip-text text-transparent">
+                    <div className="5xl:mb-6 6xl:mb-10 mb-4 flex items-center gap-3 lg:mb-2 xl:mb-4">
+                      <section.icon className="3xl:w-5 3xl:h-5 4xl:w-5 4xl:h-5 5xl:w-10 5xl:h-10 6xl:w-14 6xl:h-14 text-primary/70 group-hover:text-primary h-6 w-6 transition-colors sm:h-7 sm:w-7 md:h-7 md:w-7 lg:h-5 lg:w-5 xl:h-5 xl:w-5 2xl:h-5 2xl:w-5" />
+                      <h3 className="3xl:text-3xl 4xl:text-3xl 5xl:text-4xl 6xl:text-6xl from-primary/80 via-primary/60 to-primary/80 bg-gradient-to-r bg-clip-text text-lg font-semibold text-transparent sm:text-xl md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl">
                         {section.title}
                       </h3>
                     </div>
-                    <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-1 xl:gap-2 2xl:gap-2 3xl:gap-2 4xl:gap-2 5xl:gap-6 6xl:gap-6">
+                    <div className="3xl:gap-2 4xl:gap-2 5xl:gap-6 6xl:gap-6 grid grid-cols-4 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-1 xl:grid-cols-4 xl:gap-2 2xl:gap-2">
                       {section.skills.map((skill, index) => (
                         <motion.div
                           key={index}
@@ -589,16 +589,16 @@ export default function Page() {
                             delay: sectionIndex * 0.1 + index * 0.05,
                           }}
                           whileHover={{ y: -2 }}
-                          className="flex flex-col items-center justify-center p-2 sm:p-2.5 md:p-3 lg:p-1 xl:p-2 2xl:p-2 3xl:p-2 4xl:p-2 5xl:p-4 6xl:p-4 rounded-lg hover:bg-accent/40 transition-all duration-200 group/skill"
+                          className="3xl:p-2 4xl:p-2 5xl:p-4 6xl:p-4 hover:bg-accent/40 group/skill flex flex-col items-center justify-center rounded-lg p-2 transition-all duration-200 sm:p-2.5 md:p-3 lg:p-1 xl:p-2 2xl:p-2"
                         >
                           {skill.isImage ? (
-                            <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-6 lg:h-6 xl:w-6 xl:h-6 2xl:w-6 2xl:h-6 3xl:w-8 3xl:h-8 4xl:w-6 4xl:h-6 5xl:w-12 5xl:h-12 6xl:w-24 6xl:h-24 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity">
+                            <div className="3xl:w-8 3xl:h-8 4xl:w-6 4xl:h-6 5xl:w-12 5xl:h-12 6xl:w-24 6xl:h-24 mb-2 h-6 w-6 opacity-80 transition-opacity group-hover/skill:opacity-100 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-6 lg:w-6 xl:h-6 xl:w-6 2xl:h-6 2xl:w-6">
                               {skill.icon}
                             </div>
                           ) : (
-                            <skill.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-6 lg:h-6 xl:w-6 xl:h-6 2xl:w-6 2xl:h-6 3xl:w-8 3xl:h-8 4xl:w-6 4xl:h-6 5xl:w-12 5xl:h-12 6xl:w-24 6xl:h-24 mb-2 opacity-80 group-hover/skill:opacity-100 transition-opacity text-primary/80 group-hover/skill:text-primary" />
+                            <skill.icon className="3xl:w-8 3xl:h-8 4xl:w-6 4xl:h-6 5xl:w-12 5xl:h-12 6xl:w-24 6xl:h-24 text-primary/80 group-hover/skill:text-primary mb-2 h-6 w-6 opacity-80 transition-opacity group-hover/skill:opacity-100 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-6 lg:w-6 xl:h-6 xl:w-6 2xl:h-6 2xl:w-6" />
                           )}
-                          <span className="text-xs sm:text-sm lg:text-xs xl:text-sm 2xl:text-sm 3xl:text-lg 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-center text-muted-foreground group-hover/skill:text-primary/90 transition-colors">
+                          <span className="3xl:text-lg 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground group-hover/skill:text-primary/90 text-center text-xs transition-colors sm:text-sm lg:text-xs xl:text-sm 2xl:text-sm">
                             {skill.name}
                           </span>
                         </motion.div>
@@ -722,7 +722,7 @@ const backendSkills = [
         alt="C#"
         width={32}
         height={32}
-        className="w-full h-full object-contain"
+        className="h-full w-full object-contain"
       />
     ),
   },
@@ -750,7 +750,7 @@ const cloudSkills = [
         alt="C#"
         width={32}
         height={32}
-        className="w-full h-full object-contain"
+        className="h-full w-full object-contain"
       />
     ),
   },
@@ -765,7 +765,7 @@ const cloudSkills = [
         alt="C#"
         width={32}
         height={32}
-        className="w-full h-full object-contain"
+        className="h-full w-full object-contain"
       />
     ),
   },
@@ -798,7 +798,7 @@ const otherToolsSkills = [
         alt="C#"
         width={32}
         height={32}
-        className="w-full h-full object-contain"
+        className="h-full w-full object-contain"
       />
     ),
   },
