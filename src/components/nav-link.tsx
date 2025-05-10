@@ -30,11 +30,13 @@ export function NavLink({
       className={cn(
         buttonVariants({ variant: "ghost" }),
         "w-full justify-start gap-2",
-        isActive && "bg-accent"
+        isActive && "bg-accent",
       )}
     >
       <Icon className="h-4 w-4" />
-      <span className="hidden lg:inline-block">{name}</span>
+      <span className="group-data-[collapsible=icon]:hidden lg:inline-block">
+        {name}
+      </span>
     </Link>
   );
 }

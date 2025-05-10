@@ -29,9 +29,14 @@ export function TeamSwitcher() {
           size="lg"
           className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
         >
-          <div className="grid flex-1 text-left text-sm leading-tight">
+          <div className="grid flex-1 text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
             <span className="truncate font-medium">Dhaval Darji</span>
             <span className="truncate text-xs">Full Stack Web Developer</span>
+          </div>
+          <div className="hidden flex-1 justify-items-center text-left text-sm leading-tight group-data-[collapsible=icon]:grid">
+            <span className="truncate font-medium">
+              D<sup>2</sup>
+            </span>
           </div>
         </SidebarMenuButton>
       </SidebarMenuItem>
