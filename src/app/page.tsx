@@ -128,14 +128,16 @@ export default function Page() {
     <SidebarProvider>
       <AppSidebar setSection={handleSectionChange} currentSection={section} />
       <SidebarInset>
-        <header className="sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2">
+        <header className="sticky top-0 z-50 flex h-16 sm:h-16 md:h-16 lg:h-12 xl:h-12 2xl:h-16 3xl:h-16 4xl:h-16 5xl:h-22 6xl:h-24 shrink-0 items-center gap-2">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbPage>{sectionTitle}</BreadcrumbPage>
+                  <BreadcrumbPage className="text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-xl 3xl:text-xl 4xl:text-xl 5xl:text-xl 6xl:text-3xl">
+                    {sectionTitle}
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
