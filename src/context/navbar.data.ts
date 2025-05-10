@@ -34,10 +34,10 @@ export default {
       url: "#skills",
       icon: CodeIcon,
     },
-    {
-      name: "Contact Me",
-      url: "#contact-me",
-      icon: SendIcon,
-    },
+    // {
+    //   name: "Contact Me",
+    //   url: "#contact-me",
+    //   icon: SendIcon,
+    // },
   ],
 };
