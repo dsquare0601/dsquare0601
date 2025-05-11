@@ -127,7 +127,13 @@ export default function Skills({ id }: { id: string }) {
   );
 }
 
-const frontendSkills = [
+type Skills = {
+  name: string;
+  icon: any;
+  isImage?: boolean;
+}[];
+
+const frontendSkills: Skills = [
   { name: "React", icon: SiReact },
   { name: "Next.js", icon: SiNextdotjs },
   { name: "Redux", icon: SiRedux },
@@ -141,7 +147,7 @@ const frontendSkills = [
   { name: "Three.js", icon: SiThreedotjs },
 ];
 
-const backendSkills = [
+const backendSkills: Skills = [
   { name: "Node.js", icon: SiNodedotjs },
   { name: "TypeScript", icon: SiTypescript },
   { name: "NestJS", icon: SiNestjs },
@@ -165,7 +171,7 @@ const backendSkills = [
   },
 ];
 
-const databaseSkills = [
+const databaseSkills: Skills = [
   { name: "PostgreSQL", icon: SiPostgresql },
   { name: "MySQL", icon: SiMysql },
   { name: "MongoDB", icon: SiMongodb },
@@ -174,7 +180,7 @@ const databaseSkills = [
   { name: "AWS RDS", icon: SiAmazonrds },
 ];
 
-const cloudSkills = [
+const cloudSkills: Skills = [
   { name: "AWS", icon: SiAmazonwebservices },
   { name: "AWS Amplify", icon: SiAwsamplify },
   { name: "AWS AppSync", icon: SiAmazonwebservices },
@@ -211,7 +217,7 @@ const cloudSkills = [
   { name: "Kubernetes", icon: SiKubernetes },
 ];
 
-const webTechSkills = [
+const webTechSkills: Skills = [
   { name: "HTML5", icon: SiHtml5 },
   { name: "CSS3", icon: SiCss3 },
   { name: "JavaScript", icon: SiJavascript },
@@ -220,7 +226,7 @@ const webTechSkills = [
   { name: "GraphQL", icon: SiGraphql },
 ];
 
-const otherToolsSkills = [
+const otherToolsSkills: Skills = [
   { name: "Git", icon: SiGit },
   { name: "CI/CD", icon: SiGithubactions },
   { name: "Salesforce", icon: SiSalesforce },

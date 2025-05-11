@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionCarouselProps {
@@ -21,9 +21,11 @@ export function SectionCarousel({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const sectionIndex = children.findIndex(
-      (child) => (child as React.ReactElement).props.id === currentSection,
-    );
+    const sectionIndex = children.findIndex((child: any) => {
+      if (React.isValidElement<{ id: string }>(child)) {
+        return child.props.id === currentSection;
+      }
+    });
     if (sectionIndex !== -1 && sectionIndex !== activeSection) {
       goToSection(sectionIndex);
     }
@@ -34,7 +36,9 @@ export function SectionCarousel({
     setIsTransitioning(true);
     setActiveSection(index);
 
-    const sectionElement = children[index] as React.ReactElement;
+    const sectionElement = children[index] as React.ReactElement<{
+      id: string;
+    }>;
     const sectionId = sectionElement.props.id;
     setSection(sectionId);
 
@@ -46,7 +50,6 @@ export function SectionCarousel({
     if (!container) return;
 
     let lastScroll = 0;
-    let scrollTimeout: NodeJS.Timeout;
 
     const handleScroll = (e: WheelEvent) => {
       if (isScrollLocked) return;
@@ -70,7 +73,6 @@ export function SectionCarousel({
     container.addEventListener("wheel", handleScroll, { passive: false });
     return () => {
       container.removeEventListener("wheel", handleScroll);
-      clearTimeout(scrollTimeout);
     };
   }, [activeSection, children.length, isTransitioning, isScrollLocked]);
 

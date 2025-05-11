@@ -1,21 +1,29 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
-export function ProfessionalProjectCard({ title, description, techStack }) {
+export function ProfessionalProjectCard({
+  title,
+  description,
+  techStack,
+}: {
+  title: string;
+  description: string;
+  techStack: { name: string; icon: any }[];
+}) {
   return (
-    <Card className="w-[350px] h-[250px]">
+    <Card className="h-[250px] w-[350px]">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-muted-foreground mb-4">{description}</p>
+        <p className="text-muted-foreground mb-4 text-sm">{description}</p>
         <div className="flex gap-2">
           {techStack.map((tech, index) => {
             const Icon = tech.icon;
             return (
               <Icon
                 key={index}
-                className="w-5 h-5 text-muted-foreground"
+                className="text-muted-foreground h-5 w-5"
                 strokeWidth={1.5}
               />
             );
@@ -26,19 +34,27 @@ export function ProfessionalProjectCard({ title, description, techStack }) {
   );
 }
 
-export function PersonalProjectCard({ title, image, techStack }) {
+export function PersonalProjectCard({
+  title,
+  image,
+  techStack,
+}: {
+  title: string;
+  image: any;
+  techStack: { name: string; icon: any }[];
+}) {
   return (
-    <Card className="w-[350px] h-[300px]">
+    <Card className="h-[300px] w-[350px]">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="relative w-full h-[150px] mb-4">
+        <div className="relative mb-4 h-[150px] w-full">
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover rounded-md"
+            className="rounded-md object-cover"
           />
         </div>
         <div className="flex gap-2">
@@ -47,7 +63,7 @@ export function PersonalProjectCard({ title, image, techStack }) {
             return (
               <Icon
                 key={index}
-                className="w-5 h-5 text-muted-foreground"
+                className="text-muted-foreground h-5 w-5"
                 strokeWidth={1.5}
               />
             );

@@ -201,7 +201,7 @@ export default function Projects({
                           <p className="3xl:text-sm 4xl:text-sm 5xl:text-2xl 6xl:text-4xl text-muted-foreground text-sm leading-relaxed md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">
                             {project.description}
                           </p>
-                          {project?.image && (
+                          {/* {project?.image && (
                             <motion.div
                               whileHover={{ scale: 1.02 }}
                               transition={{ duration: 0.2 }}
@@ -214,7 +214,7 @@ export default function Projects({
                                 className="rounded-lg shadow-lg"
                               />
                             </motion.div>
-                          )}
+                          )} */}
                         </motion.div>
                       </AccordionContent>
                     </AccordionItem>
