@@ -7,11 +7,6 @@ import {
 } from "lucide-react";
 
 export default {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   sections: [
     {
       name: "About Me!",
