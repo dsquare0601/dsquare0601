@@ -22,7 +22,7 @@ export function SectionCarousel({
 
   useEffect(() => {
     const sectionIndex = children.findIndex(
-      (child) => (child as React.ReactElement).props.id === currentSection
+      (child) => (child as React.ReactElement).props.id === currentSection,
     );
     if (sectionIndex !== -1 && sectionIndex !== activeSection) {
       goToSection(sectionIndex);
@@ -77,14 +77,14 @@ export function SectionCarousel({
   return (
     <div
       ref={containerRef}
-      className="h-[calc(100vh-4rem)] relative overflow-hidden"
+      className="relative h-[calc(100vh-4rem)] overflow-hidden"
     >
       {children.map((child, index) => (
         <div
           key={index}
           className={cn(
-            "absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out",
-            index === activeSection ? "z-10" : "z-0"
+            "absolute inset-0 h-full w-full transition-transform duration-300 ease-in-out",
+            index === activeSection ? "z-10" : "z-0",
           )}
           style={{
             transform: `translateY(${(index - activeSection) * 100}%)`,
@@ -95,16 +95,16 @@ export function SectionCarousel({
       ))}
 
       {/* Navigation dots */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-50">
+      <div className="fixed top-1/2 right-6 z-50 flex -translate-y-1/2 flex-col gap-2">
         {children.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSection(index)}
             className={cn(
-              "w-2 h-2 rounded-full transition-all duration-300",
+              "h-2 w-2 rounded-full transition-all duration-300",
               index === activeSection
                 ? "bg-primary h-4"
-                : "bg-muted hover:bg-primary/50"
+                : "bg-muted hover:bg-primary/50",
             )}
             aria-label={`Go to section ${index + 1}`}
           />
