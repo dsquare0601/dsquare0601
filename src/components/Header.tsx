@@ -16,7 +16,7 @@ export default function Header({ sectionTitle }: { sectionTitle: string }) {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbPage className="3xl:text-xl 4xl:text-xl 5xl:text-xl 6xl:text-3xl text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-xl">
+              <BreadcrumbPage className="3xl:text-xl 4xl:text-xl 5xl:text-xl 6xl:text-3xl text-sm sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-sm">
                 {sectionTitle}
               </BreadcrumbPage>
             </BreadcrumbItem>
