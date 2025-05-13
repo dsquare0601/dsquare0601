@@ -8,6 +8,10 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
+  --breakpoint-mxs: 20rem;
+  --breakpoint-msm: 23rem;
+  --breakpoint-mmd: 25.875rem;
+
   --breakpoint-3xl: 120rem;
   --breakpoint-4xl: 140rem;
   --breakpoint-5xl: 160rem;
