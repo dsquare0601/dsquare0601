@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, TouchEvent } from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionCarouselProps {
   children: React.ReactNode[];
-  setSection: (sectionId: string) => void;
+  setSection: (section: string) => void;
   currentSection: string;
-  isScrollLocked: boolean;
+  isScrollLocked?: boolean;
 }
 
 export function SectionCarousel({
@@ -18,7 +18,14 @@ export function SectionCarousel({
 }: SectionCarouselProps) {
   const [activeSection, setActiveSection] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [touchStart, setTouchStart] = useState<number>(0);
+  const [touchEnd, setTouchEnd] = useState<number>(0);
+  const [touchStartTime, setTouchStartTime] = useState<number>(0);
+  const [touchMovePosition, setTouchMovePosition] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const minSwipeDistance = 80;
+  const minSwipeVelocity = 0.5; // pixels per millisecond
 
   useEffect(() => {
     const sectionIndex = children.findIndex((child: any) => {
@@ -76,16 +83,64 @@ export function SectionCarousel({
     };
   }, [activeSection, children.length, isTransitioning, isScrollLocked]);
 
+  const handleTouchStart = (e: TouchEvent) => {
+    e.preventDefault();
+    setTouchStart(e.targetTouches[0].clientY);
+    setTouchStartTime(Date.now());
+    setTouchMovePosition(e.targetTouches[0].clientY);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    e.preventDefault();
+    setTouchEnd(e.targetTouches[0].clientY);
+    setTouchMovePosition(e.targetTouches[0].clientY);
+  };
+
+  const handleTouchEnd = () => {
+    if (isScrollLocked || isTransitioning) return;
+
+    const swipeDistance = touchStart - touchEnd;
+    const swipeTime = Date.now() - touchStartTime;
+    const velocity = Math.abs(swipeDistance) / swipeTime;
+
+    if (
+      Math.abs(swipeDistance) > minSwipeDistance ||
+      velocity > minSwipeVelocity
+    ) {
+      const direction = swipeDistance > 0 ? "up" : "down";
+      const currentIndex = children.findIndex(
+        (child) => (child as any).props.id === currentSection,
+      );
+
+      setIsTransitioning(true);
+      if (direction === "up" && currentIndex < children.length - 1) {
+        goToSection(currentIndex + 1);
+      } else if (direction === "down" && currentIndex > 0) {
+        goToSection(currentIndex - 1);
+      }
+
+      setTimeout(() => setIsTransitioning(false), 800);
+    }
+
+    setTouchStart(0);
+    setTouchEnd(0);
+    setTouchStartTime(0);
+    setTouchMovePosition(0);
+  };
+
   return (
     <div
       ref={containerRef}
-      className="relative h-[calc(100vh-4rem)] overflow-hidden"
+      className="relative h-[calc(100vh-4rem)] touch-none overflow-hidden"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       {children.map((child, index) => (
         <div
           key={index}
           className={cn(
-            "absolute inset-0 h-full w-full transition-transform duration-300 ease-in-out",
+            "absolute inset-0 h-full w-full transition-transform duration-800 ease-out will-change-transform",
             index === activeSection ? "z-10" : "z-0",
           )}
           style={{
