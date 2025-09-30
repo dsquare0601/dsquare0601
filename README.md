@@ -3,12 +3,12 @@
 </h1>
 
 <h2 align="center">
-  🚀 Full-stack Developer | Node.js, React, AWS | 4.5+ YOE
+  🚀 Full-stack Developer | Node.js, React, AWS | 5 YOE
 </h2>
 
 <p align="center">
   <samp>
-    I'm a Full Stack Web Developer from INDIA with 4.5+ years of experience in building scalable, efficient web applications and APIs.
+    I'm a Full Stack Web Developer from INDIA with 5 years of experience in building scalable, efficient web applications and APIs.
     I specialize in Node.js, React.js, and AWS services, with a passion for creating robust applications and solving complex problems.
   </samp>
 </p>
